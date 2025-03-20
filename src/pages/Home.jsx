@@ -1,13 +1,13 @@
 import React from 'react'
-import { Hero, Challenges } from '../components'
+import { Hero, Challenges, Footer } from '../components'
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <main>
       <Hero />
       <Challenges />
-    </div>
+      <Footer />
+    </main>
   )
 }
 
