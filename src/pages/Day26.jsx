@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Button } from '../components/ui'
 
 const Day26 = () => {
   return (
@@ -19,8 +20,21 @@ const Day26 = () => {
         </div>
         {/* Subscribe Section */}
         <div className='border border-yellow-500 p-4'>
-          <h1>Subscribe to newsletter</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, blanditiis asperiores? Ad quas sapiente repellat voluptatum voluptates facere fuga ipsam praesentium, necessitatibus illum? Explicabo, culpa aspernatur optio deserunt quidem quas?</p>
+          <div className='h-full flex flex-col justify-between'>
+            {/* Start Content */}
+            <div>
+              <h1>Subscribe to newsletter</h1>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, blanditiis asperiores? Ad quas sapiente repellat voluptatum voluptates facere fuga ipsam praesentium, necessitatibus illum? Explicabo, culpa aspernatur optio deserunt quidem quas?</p>
+            </div>
+            {/* Middle Content */}
+            <div>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, blanditiis asperiores? Ad quas sapiente repellat voluptatum voluptates facere fuga ipsam praesentium, necessitatibus illum? Explicabo, culpa aspernatur optio deserunt quidem quas?</p>
+            </div>
+            {/* End Content */}
+            <div>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, blanditiis asperiores? Ad quas sapiente repellat voluptatum voluptates facere fuga ipsam praesentium, necessitatibus illum? Explicabo, culpa aspernatur optio deserunt quidem quas?</p>
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>

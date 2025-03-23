@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 body {
+  @apply bg-gray-900;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
