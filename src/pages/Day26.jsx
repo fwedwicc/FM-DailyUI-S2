@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '../components/ui'
+import { HiOutlineStar } from "react-icons/hi"
 
 const Day26 = () => {
   return (
@@ -29,6 +30,10 @@ const Day26 = () => {
             {/* Middle Content */}
             <div>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, blanditiis asperiores? Ad quas sapiente repellat voluptatum voluptates facere fuga ipsam praesentium, necessitatibus illum? Explicabo, culpa aspernatur optio deserunt quidem quas?</p>
+              {/* Subscribe */}
+              <Button label={'Subscribe'} variant='primary'>
+                <HiOutlineStar className='size-5' />
+              </Button>
             </div>
             {/* End Content */}
             <div>

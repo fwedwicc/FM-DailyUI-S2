@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ButtonCollection } from '../components'
+import { ButtonCollection, InputCollection } from '../components'
 
 const UICollection = () => {
   return (
@@ -9,10 +9,12 @@ const UICollection = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className='bg-gray-900 p-12'
+      className='bg-gray-900 p-12 space-y-4'
     >
       {/* Button Components */}
       <ButtonCollection />
+      {/* Input Components */}
+      <InputCollection />
     </motion.main>
   )
 }
