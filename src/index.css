@@ -6,22 +6,25 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
-p,
+
+p {
+  @apply text-gray-300 md:text-base text-sm md:leading-normal leading-5;
+}
 span {
-  @apply text-gray-300;
+  @apply md:text-base text-sm md:leading-normal leading-5;
 }
 h1 {
-  @apply text-5xl font-semibold tracking-tight text-white;
+  @apply md:text-5xl text-4xl font-semibold tracking-tight text-white;
 }
 h2 {
-  @apply text-4xl font-semibold tracking-tight text-white;
+  @apply md:text-4xl text-3xl font-semibold tracking-tight text-white;
 }
 h3 {
-  @apply text-3xl font-semibold tracking-tight text-white;
+  @apply md:text-3xl text-2xl font-semibold tracking-tight text-white;
 }
 h4 {
-  @apply text-2xl font-semibold tracking-tight text-white;
+  @apply md:text-2xl text-xl font-semibold tracking-tight text-white;
 }
 h5 {
-  @apply text-xl font-semibold tracking-tight text-white;
+  @apply md:text-xl text-lg font-semibold tracking-tight text-white;
 }

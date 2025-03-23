@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Input, Button, Icon } from '../components/ui'
+import { ImageIllustration } from '../assets/day26'
+import { FMLogo } from '../assets'
 import { HiCalendar, HiShieldCheck, HiOutlinePaperAirplane, HiOutlineMail, HiOutlineArrowSmRight } from "react-icons/hi"
 import { SiLinkedin, SiInstagram, SiFacebook, SiX } from "react-icons/si"
 
@@ -8,7 +10,7 @@ const Day26 = () => {
 
   const Link = ({ children, styles }) => {
     return (
-      <a className={`${styles} underline text-indigo-400 cursor-pointer`}>
+      <a className={`${styles} md:text-base text-sm underline text-indigo-400 cursor-pointer`}>
         {children}
       </a>
     )
@@ -24,27 +26,27 @@ const Day26 = () => {
     >
       <div className='grid lg:grid-cols-2 grid-cols-1 lg:min-h-screen'>
         {/* Illustration/Company Details */}
-        <div className='lg:h-full h-[25rem] p-3 border border-yellow-400/30'>
-          <div className='relative h-full overflow-hidden rounded-3xl border border-yellow-400/30'>
-            <img src="https://placehold.co/30x30" alt="Sample Image" className='z-10 object-cover absolute w-full h-full' />
+        <div className='md:order-1 order-2 lg:h-full h-[30rem] p-4'>
+          <div className='relative h-full overflow-hidden md:rounded-3xl rounded-2xl border border-gray-800'>
+            <img src={ImageIllustration} alt="Image Illustration" className='z-10 object-cover absolute w-full h-full' />
             {/* Blur Effect */}
-            <div className='z-20 absolute bg-gray-950 h-[27rem] w-[28rem] -bottom-14 -left-14 rounded-tr-[8rem] blur-2xl' />
-            <div className='z-20 absolute bg-gray-950 h-[17rem] w-[70rem] -bottom-14 -right-14 blur-2xl' />
+            <div className='z-20 absolute bg-gray-950 h-[27rem] md:w-[28rem] w-[18rem] -bottom-14 -left-14 rounded-tr-[8rem] blur-2xl' />
+            <div className='z-20 absolute bg-gray-950 md:h-[17rem] h-[14rem] w-[70rem] -bottom-14 -right-14 blur-2xl' />
             {/* Additional Contents */}
-            <div className='z-30 absolute bottom-0 p-12 space-y-3 border border-yellow-400/30'>
-              <div className='relative size-24 rounded-2xl overflow-hidden border border-yellow-400/30'>
-                <img src="https://placehold.co/30x30" alt="Sample Image" className='object-cover absolute w-full h-full' />
+            <div className='z-30 absolute bottom-0 md:p-12 p-6 space-y-3'>
+              <div className='size-24 flex items-center justify-center rounded-2xl bg-gray-900 outline-2 outline-offset-4 outline-indigo-500 border border-gray-800'>
+                <img src={FMLogo} alt="FM Logo" className='size-12' />
               </div>
-              <h1>Hello, World</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quos eaque odio, aliquam corrupti consequuntur beatae? Voluptate id quae, voluptatibus officia debitis odio possimus, suscipit mollitia omnis fugiat aliquid sapiente.</p>
+              <h1 className='mt-6'>Hello, World!</h1>
+              <p className='w-full max-w-xl'>Exploring Series 2 (Challenges 26-50) of my Daily UI journey, building on fmUI from Series 1. Inspired by Tailwind UI, these designs enhance development skills and spark creativity.</p>
             </div>
           </div>
         </div>
         {/* Subscribe Section */}
-        <div className='p-8 border border-yellow-400/30'>
-          <div className='h-full flex flex-col justify-between lg:gap-y-0 gap-y-20 border border-yellow-400/30'>
+        <div className='md:order-2 order-1 md:p-8 p-4'>
+          <div className='h-full flex flex-col justify-between lg:gap-y-0 gap-y-20'>
             {/* Start Content */}
-            <div className='flex justify-between items-center border border-yellow-400/30'>
+            <div className='flex justify-between items-center'>
               <Link>
                 Privacy Policy
               </Link>
@@ -54,37 +56,37 @@ const Day26 = () => {
               </Link>
             </div>
             {/* Middle Content */}
-            <div className='space-y-8 border border-yellow-400/30'>
+            <div className='space-y-8'>
               {/* Additional Contents */}
-              <div className='space-y-4 border border-yellow-400/30'>
+              <div className='space-y-4'>
                 <h1>Stay ahead with us!</h1>
-                <div className='grid grid-cols-2 gap-4 pt-6'>
+                <div className='grid md:grid-cols-2 grid-cols-1 gap-4 pt-3'>
                   {[
                     {
                       icon: HiCalendar,
-                      title: 'Weekly content',
-                      desc: 'Get thoughtfully selected articles, tools, and resources delivered straight to your inbox every Monday.'
+                      title: 'Curated content',
+                      desc: 'Get the latest web dev and design trends, productivity tools delivered every Monday.'
                     },
                     {
                       icon: HiShieldCheck,
                       title: 'Privacy respected',
-                      desc: 'We never share your information with third parties and you can unsubscribe with a single click anytime.'
+                      desc: 'We never share your information, and you can unsubscribe anytime with one click.'
                     },
                   ].map((item, index) => (
-                    <div className='space-y-2 border border-yellow-400/30' key={index}>
+                    <div className='space-y-2' key={index}>
                       <Icon styles='size-10'>
                         <item.icon
                           className='size-6 text-indigo-500'
                         />
                       </Icon>
                       <h5>{item.title}</h5>
-                      <span>{item.desc}</span>
+                      <p>{item.desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
               {/* Subscribe */}
-              <div className='relative w-full border border-yellow-400/30'>
+              <div className='relative w-full'>
                 <HiOutlineMail className='size-6 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-600' />
                 <Input
                   id="email"
@@ -94,31 +96,31 @@ const Day26 = () => {
                   styles="w-auto"
                   inputStyles='pr-24 px-12 py-4 rounded-xl'
                 />
-                <Button label={'Subscribe'} variant='primary' styles='absolute top-1/2 -translate-y-1/2 right-2'>
+                <Button label={'Subscribe'} variant='primary' styles='absolute top-1/2 -translate-y-1/2 md:right-2 right-[5.5px]'>
                   <HiOutlinePaperAirplane className='size-4.5 rotate-90' />
                 </Button>
               </div>
               {/* Additional Contents */}
-              <div className='space-y-3 border border-yellow-400/30'>
+              <div className='space-y-3'>
                 <div className='flex items-center'>
                   {/* Avatar */}
                   {[
-                    "https://placehold.co/30x30",
-                    "https://placehold.co/30x30",
-                    "https://placehold.co/30x30",
-                    "https://placehold.co/30x30"
+                    "https://github.com/themesberg/flowbite/blob/main/static/images/people/profile-picture-2.jpg?raw=true",
+                    "https://github.com/themesberg/flowbite/blob/main/static/images/people/profile-picture-5.jpg?raw=true",
+                    "https://github.com/themesberg/flowbite/blob/main/static/images/people/profile-picture-3.jpg?raw=true",
+                    "https://github.com/themesberg/flowbite/blob/main/static/images/people/profile-picture-4.jpg?raw=true"
                   ].map((item, index) => (
-                    <div className={`${index === 0 ? '' : '-ml-1'} relative size-8 rounded-full overflow-hidden ring-2 ring-indigo-500`} key={index}>
+                    <div className={`${index === 0 ? '' : '-ml-1'} relative size-8 rounded-full overflow-hidden ring-2 ring-indigo-300`} key={index}>
                       <img src={item} alt="Sample Avatar" className='absolute object-cover w-full h-full' />
                     </div>
                   ))}
-                  <span className='ms-3.5'>5,000+ readers</span>
+                  <p className='ms-3.5'><span className='text-indigo-400'>5,000+</span> developers & designers</p>
                 </div>
-                <p>Join readers getting insights every week. No spam, ever.</p>
+                <p>Join peers receiving valuable insights weekly. No spam—just quality content.</p>
               </div>
             </div>
             {/* End Content */}
-            <div className='border border-yellow-400/30'>
+            <div className=''>
               <div className='space-x-2'>
                 {[
                   { icon: SiLinkedin },
