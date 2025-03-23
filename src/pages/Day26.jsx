@@ -8,8 +8,21 @@ const Day26 = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
+      className='bg-gray-900 border border-yellow-500'
     >
-      <h1>Currently Crafting...</h1>
+      <div className='grid lg:grid-cols-2 grid-cols-1 md:min-h-screen'>
+        {/* Illustration/Company Details */}
+        <div className='border border-yellow-400 h-full p-3'>
+          <div className='relative border border-yellow-400 h-full overflow-hidden rounded-xl'>
+            <img src="" alt="Sample Image" className='object-cover absolute w-full h-full' />
+          </div>
+        </div>
+        {/* Subscribe Section */}
+        <div className='border border-yellow-500 p-4'>
+          <h1>Subscribe to newsletter</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, blanditiis asperiores? Ad quas sapiente repellat voluptatum voluptates facere fuga ipsam praesentium, necessitatibus illum? Explicabo, culpa aspernatur optio deserunt quidem quas?</p>
+        </div>
+      </div>
     </motion.div>
   )
 }

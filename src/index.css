@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+p,
+span {
+  @apply text-gray-300;
+}
+h1 {
+  @apply text-5xl font-semibold tracking-tight text-white;
+}
+h2 {
+  @apply text-4xl font-semibold tracking-tight text-white;
+}
+h3 {
+  @apply text-3xl font-semibold tracking-tight text-white;
+}
+h4 {
+  @apply text-2xl font-semibold tracking-tight text-white;
+}
+h5 {
+  @apply text-xl font-semibold tracking-tight text-white;
+}
