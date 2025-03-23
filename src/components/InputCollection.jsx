@@ -67,6 +67,19 @@ const InputCollection = () => {
           />
           <Button label={'Primary'} variant='primary' styles='absolute top-1/2 -translate-y-1/2 right-2' />
         </div>
+        {/* With Button Child and start-icon */}
+        <div className='relative'>
+          <HiOutlineStar className='size-6 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-600' />
+          <Input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="E.g fwedwicc"
+            styles="w-auto"
+            inputStyles='pr-24 px-12 py-4 rounded-xl'
+          />
+          <Button label={'Primary'} variant='primary' styles='absolute top-1/2 -translate-y-1/2 right-2' />
+        </div>
       </div>
     </motion.section >
   )
