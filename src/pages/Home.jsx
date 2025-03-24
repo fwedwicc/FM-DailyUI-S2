@@ -8,7 +8,7 @@ const Home = () => {
       <Header />
       {/* Main Content */}
       <div className='px-4'>
-        <div className='p-4 border border-yellow-200/20 rounded-2xl'>
+        <div className='border border-yellow-200/20 rounded-2xl overflow-hidden'>
           <Hero />
           <Challenges />
         </div>
