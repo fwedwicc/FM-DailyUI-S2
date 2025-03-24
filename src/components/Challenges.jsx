@@ -4,7 +4,7 @@ import { Cards, titles } from '../data'
 
 const Challenges = () => {
   return (
-    <section className='bg-green-100'>
+    <section className='text-yellow-200'>
       <h1>Challenges Section</h1>
       {/* Cards */}
       <div className='grid grid-cols-3'>

@@ -3,10 +3,10 @@ import React from 'react'
 const Hero = () => {
   return (
     <>
-      <section className='bg-indigo-100 md:min-h-screen'>
+      <section className='text-yellow-200'>
         <h1>Hero Section</h1>
       </section>
-      <section className='bg-red-100'>
+      <section className='text-yellow-200'>
         <a href="https://fwedwicc.github.io/FM-DailyUI/" target='_blank' rel='noopener noreferrer' className='inline-block border p-4'>
           FM DailyUI S1
         </a>
