@@ -32,12 +32,12 @@ const Hero = () => {
         </div>
       </section>
       {/* Second Section */}
-      <section className='p-4 grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-9 md:mt-0 mt-4'>
+      <section className='p-4 grid lg:grid-cols-2 grid-cols-1 md:gap-6 gap-9 md:mt-0 mt-4'>
         {/* Series Links */}
-        <div className='md:order-1 order-2 grid md:grid-cols-2 grid-cols-1 gap-3'>
+        <div className='lg:order-1 order-2 grid md:grid-cols-2 grid-cols-1 gap-3'>
           {/* Series 1 */}
           <a href="https://fwedwicc.github.io/FM-DailyUI/" target='_blank' rel='noopener noreferrer' className='inline-block border border-gray-800 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl p-4 space-y-2 outline-2 outline-green-400/20 hover:outline-green-400/50 outline-offset-2 transition duration-300 ease-in-out'>
-            <div className='flex justify-between items-start'>
+            <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 1</h5>
               <Badge text='Finished Series' styles='flex-row-reverse' variant='success'>
                 <HiSparkles className='size-4' />
@@ -46,7 +46,7 @@ const Hero = () => {
             <p>Challenge 1 to 25</p>
           </a>
           <div className='inline-block border border-gray-800 bg-gray-800/30 rounded-xl p-4 space-y-2 outline-2 outline-indigo-400/30 outline-offset-2'>
-            <div className='flex justify-between items-start'>
+            <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 2</h5>
               <Badge text='Currently Browsing' styles='flex-row-reverse' variant='main'>
                 <HiSparkles className='size-4' />
@@ -55,7 +55,7 @@ const Hero = () => {
             <p>Challenge 26 to 50</p>
           </div>
           <div className='inline-block border border-gray-800 bg-gray-800/30 rounded-xl p-4 space-y-2 outline-2 outline-gray-400/10 outline-offset-2 opacity-60 cursor-not-allowed'>
-            <div className='flex justify-between items-start'>
+            <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 3</h5>
               <Badge text='Upcoming Series' styles='flex-row-reverse'>
                 <HiSparkles className='size-4' />
@@ -64,7 +64,7 @@ const Hero = () => {
             <p>Challenge 51 to 75</p>
           </div>
           <div className='inline-block border border-gray-800 bg-gray-800/30 rounded-xl p-4 space-y-2 outline-2 outline-gray-400/10 outline-offset-2 opacity-60 cursor-not-allowed'>
-            <div className='flex justify-between items-start'>
+            <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 4</h5>
               <Badge text='Upcoming Series' styles='flex-row-reverse'>
                 <HiSparkles className='size-4' />
@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
         </div>
         {/* Total designs & Tech stack */}
-        <div className='md:order-2 order-1 grid md:grid-cols-2 grid-cols-1 md:gap-2 gap-5 md:mt-6 mt-0'>
+        <div className='lg:order-2 order-1 grid md:grid-cols-2 grid-cols-1 md:gap-2 gap-5 md:mt-6 mt-0'>
           {[
             { icon: <HiSparkles className='size-9' />, title: '25 Curated Designs', desc: 'Lorem ipsum dolor site nihil nemo fugit voluptas Lorem ipsum dolor site nihil nemo fugit voluptas arche id vitae magni!' },
             {
@@ -94,10 +94,6 @@ const Hero = () => {
             </div>
           ))}
         </div>
-      </section>
-      {/*  */}
-      <section className='text-yellow-200 p-4'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum ullam qui cum et, vol fugit ex fuga possimus quaerat nihil aliquam cupiditate?
       </section>
     </>
   )

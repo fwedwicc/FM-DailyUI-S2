@@ -10,9 +10,9 @@ body {
 p {
   @apply text-gray-300 md:text-base text-sm md:leading-normal leading-5;
 }
-span {
+/* span {
   @apply md:text-base text-sm md:leading-normal leading-5;
-}
+} */
 h1 {
   @apply md:text-5xl text-4xl font-semibold tracking-tight text-white;
 }
