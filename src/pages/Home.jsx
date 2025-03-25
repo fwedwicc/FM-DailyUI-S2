@@ -13,8 +13,8 @@ const Home = () => {
       {/* Header/Nav */}
       <Header />
       {/* Main Content */}
-      <div className='px-4'>
-        <div className='border border-yellow-200/20 rounded-2xl overflow-hidden'>
+      <div className='md:px-4 px-2'>
+        <div className='border border-gray-700/40 bg-gray-800/30 rounded-2xl overflow-hidden'>
           <Hero />
           <Challenges />
         </div>
