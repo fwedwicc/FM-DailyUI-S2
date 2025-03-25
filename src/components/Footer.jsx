@@ -6,7 +6,7 @@ const Footer = () => {
   const getFullYear = new Date().getFullYear()
 
   return (
-    <footer className='flex justify-between items-center md:p-4 p-2'>
+    <footer className='flex md:flex-row flex-col gap-6 justify-between items-center md:p-4 p-2'>
       <span className='text-gray-400 text-sm'><a href="https://fm-linktree.vercel.app/" className='text-indigo-400' target='_blank' rel='noopener noreferrer'>Frederick Moreno</a> • {getFullYear}</span>
       <div className='space-x-2'>
         {[

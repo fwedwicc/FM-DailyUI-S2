@@ -1,16 +1,58 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import { Cards, titles } from '../data'
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import { SiGithub, SiDribbble } from "react-icons/si"
 import { Button } from './ui'
 
 const Challenges = () => {
+
+  const currentChallengeIndex = titles.length - 1
+  const currentChallengeNumber = currentChallengeIndex + 1
+
+  const [searchParams, setSearchParams] = useSearchParams()
+  const sectionRef = useRef(null)
+  const cardsPerPage = 10
+
+  const [isPaginationTriggered, setIsPaginationTriggered] = useState(false)
+  const currentPage = parseInt(searchParams.get('page') || '1', 10)
+
+  // Cards to display
+  const indexOfLastCard = currentPage * cardsPerPage
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage
+  const currentCards = Cards.slice(indexOfFirstCard, indexOfLastCard)
+
+  // Total number of pages
+  const totalPages = Math.ceil(Cards.length / cardsPerPage)
+
+  const firstChallenge = indexOfFirstCard + 1
+  const lastChallenge = Math.min(indexOfLastCard, Cards.length)
+
+  // Scroll to the section only when triggered by pagination
+  useEffect(() => {
+    if (isPaginationTriggered && sectionRef.current) {
+      sectionRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+
+      setIsPaginationTriggered(false)
+    }
+  }, [currentPage, isPaginationTriggered])
+
+  const handlePageChange = (page) => {
+    setIsPaginationTriggered(true)
+    setSearchParams({ page })
+  }
+
   return (
-    <section>
+    <section ref={sectionRef} className='p-4'>
       <h1>Challenges Section</h1>
+      <p>{currentChallengeNumber}</p>
       {/* Cards */}
-      <div className='grid grid-cols-3'>
-        {Cards.map((item, index) => (
+      <div className='grid grid-cols-3' key={currentPage}>
+        {currentCards.map((item, index) => (
           <div key={index} className='border p-2'>
             <p>{item.title}</p>
             <p>{item.day}</p>
@@ -19,6 +61,39 @@ const Challenges = () => {
           </div>
         ))}
       </div>
+      {/* Pagination */}
+      <div className='flex justify-between items-center mt-7'>
+        {/* Page / Number of Challenge */}
+        <div>
+          <h5>Page {currentPage}</h5>
+          <p>Challenge {firstChallenge} to {lastChallenge}</p>
+        </div>
+        {/* Pagination Controls */}
+        <div className='flex flex-wrap items-center justify-center gap-2'>
+          {/* Previous Button */}
+          <Button onClick={() => handlePageChange(Math.max(currentPage - 1, 1))} disabled={currentPage === 1} variant='secondary'>
+            <HiChevronLeft className='size-5' />
+          </Button>
+          {/* Page Numbers */}
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              className={`flex items-center justify-center md:size-10 size-9 text-sm rounded-lg cursor-pointer ${currentPage === index + 1
+                ? 'bg-indigo-500 text-white'
+                : 'bg-gray-800 text-white hover:bg-gray-700'
+                } transition-all duration-300`}
+              onClick={() => handlePageChange(index + 1)}
+            >
+              {index + 1}
+            </button>
+          ))}
+          {/* Next Button */}
+          <Button onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))} disabled={currentPage === totalPages} variant='secondary'>
+            <HiChevronRight className='size-5' />
+          </Button>
+        </div>
+      </div>
+      {/*  */}
       <footer className='flex flex-col items-center gap-12 py-12 px-4'>
         {/* Appreciation */}
         <div className='w-full max-w-md text-center space-y-4'>
