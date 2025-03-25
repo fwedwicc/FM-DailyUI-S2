@@ -4,6 +4,7 @@ import Challenges from './Challenges'
 import Footer from './Footer'
 import ButtonCollection from './ButtonCollection'
 import InputCollection from './InputCollection'
+import BadgeCollection from './BadgeCollection'
 
 export {
   Header,
@@ -11,5 +12,6 @@ export {
   Challenges,
   Footer,
   ButtonCollection,
-  InputCollection
+  InputCollection,
+  BadgeCollection
 }

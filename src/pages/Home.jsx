@@ -1,9 +1,15 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { Header, Hero, Challenges, Footer } from '../components'
 
 const Home = () => {
   return (
-    <main>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {/* Header/Nav */}
       <Header />
       {/* Main Content */}
@@ -15,7 +21,7 @@ const Home = () => {
       </div>
       {/* Footer */}
       <Footer />
-    </main>
+    </motion.main>
   )
 }
 

@@ -1,13 +1,28 @@
 import React from 'react'
 import { SiReact, SiTailwindcss } from "react-icons/si"
 import { HiSparkles, HiOutlinePlusSm } from "react-icons/hi"
+import { Button, Badge } from '../components/ui'
 
 const Hero = () => {
   return (
     <>
       {/*  */}
-      <section className='text-yellow-200 grid md:grid-cols-2 grid-cols-1 border'>
-        <div className='border p-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore nesciunt delectus cum hic eos nisi quas modi tempore officia totam harum reprehenderit, doloribus animi! Quae officiis unde suscipit soluta numquam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore nesciunt delectus cum hic eos nisi quas modi tempore officia totam harum reprehenderit, doloribus animi! Quae officiis unde suscipit soluta numquam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore nesciunt delectus cum hic eos nisi quas modi tempore officia totam harum reprehenderit, doloribus animi! Quae officiis unde suscipit soluta numquam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore nesciunt delectus cum hic eos nisi quas modi tempore officia totam harum reprehenderit, doloribus animi! Quae officiis unde suscipit soluta numquam?</div>
+      <section className='grid md:grid-cols-2 grid-cols-1 border'>
+        <div className='border p-4'>
+          <Badge text='New sasa'>
+            <HiSparkles className='size-4' />
+          </Badge>
+          <h1>Lorem ipsum, dolor sit amet consectetur adipis.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fuga eveniet nesciunt labore ullam nihil odio ratione officiis, vero pro.</p>
+          <div className='flex gap-2.5'>
+            <Button label={'Primary'} variant='primary' styles='flex-row-reverse'>
+              {/* <HiOutlineStar className='size-5' /> */}
+            </Button>
+            <Button label={'Primary'} variant='secondary' styles='flex-row-reverse'>
+              {/* <HiOutlineStar className='size-5' /> */}
+            </Button>
+          </div>
+        </div>
         <div className='relative md:h-auto h-64 right-0'>
           <img src="https://placehold.co/30x30" alt="" className='absolute object-cover w-full h-full' />
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ButtonCollection, InputCollection } from '../components'
+import { ButtonCollection, InputCollection, BadgeCollection } from '../components'
 
 const UICollection = () => {
   return (
@@ -15,6 +15,8 @@ const UICollection = () => {
       <ButtonCollection />
       {/* Input Components */}
       <InputCollection />
+      {/* Badge Components */}
+      <BadgeCollection />
     </motion.main>
   )
 }
