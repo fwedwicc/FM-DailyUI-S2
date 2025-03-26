@@ -4,7 +4,7 @@ import { routes } from './Route'
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/FM-DailyUI-S2">
       <Routes>
         {routes.map((route, index) => (
           route.index ? (
