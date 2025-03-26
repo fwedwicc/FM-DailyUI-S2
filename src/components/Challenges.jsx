@@ -53,12 +53,12 @@ const Challenges = () => {
       {/* Cards */}
       <div className='grid grid-cols-3' key={currentPage}>
         {currentCards.map((item, index) => (
-          <div key={index} className='border p-2'>
+          <Link to={item.link} key={index} className='border p-2'>
+            <img src={item.img} alt="Challenge Thumnail" className='' />
             <p>{item.title}</p>
             <p>{item.day}</p>
             <p>{item.desc}</p>
-            <Link to={item.link}>Link</Link>
-          </div>
+          </Link>
         ))}
       </div>
       {/* Pagination */}

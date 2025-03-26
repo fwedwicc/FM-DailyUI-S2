@@ -1,3 +1,4 @@
+import { FMLogo } from '../assets'
 export const Cards = []
 
 export const titles = [
@@ -11,7 +12,7 @@ const descriptions = [
 const images = [
 ]
 
-const defaultImage = 'https://placeholdco.com/50x50'
+const defaultImage = FMLogo
 
 for (let day = 26; day <= 50; day++) {
   const titleIndex = day - 26
