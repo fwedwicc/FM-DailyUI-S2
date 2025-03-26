@@ -7,12 +7,23 @@ body {
   font-style: normal;
 }
 
+/* Custom Scrollar - body */
+body::-webkit-scrollbar {
+  @apply w-2;
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-gray-800/50;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply bg-gray-600/40 rounded-[3px];
+}
+
+/* Paragraph and Headings */
 p {
   @apply text-gray-300 md:text-base text-sm md:leading-normal leading-5;
 }
-/* span {
-  @apply md:text-base text-sm md:leading-normal leading-5;
-} */
 h1 {
   @apply md:text-5xl text-4xl font-semibold tracking-tight text-white;
 }
@@ -27,4 +38,14 @@ h4 {
 }
 h5 {
   @apply md:text-xl text-lg font-semibold tracking-tight text-white;
+}
+
+/* Custom Scrollar - call */
+.custom-scrollbar {
+  @apply overflow-y-auto
+  [&::-webkit-scrollbar]:w-2
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-track]:bg-gray-800/50
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gray-600/40;
 }

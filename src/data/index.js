@@ -1,4 +1,4 @@
-import { FMLogo } from '../assets'
+import { DefaultThumbnail, Day26Thumbnail } from '../assets/thumbnail'
 export const Cards = []
 
 export const titles = [
@@ -10,9 +10,10 @@ const descriptions = [
 ]
 
 const images = [
+  Day26Thumbnail, // Day26
 ]
 
-const defaultImage = FMLogo
+const defaultImage = DefaultThumbnail
 
 for (let day = 26; day <= 50; day++) {
   const titleIndex = day - 26

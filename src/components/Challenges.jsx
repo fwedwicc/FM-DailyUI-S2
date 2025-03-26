@@ -4,16 +4,15 @@ import { useSearchParams } from 'react-router-dom'
 import { Cards, titles } from '../data'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import { SiGithub, SiDribbble } from "react-icons/si"
-import { Button } from './ui'
+import { Button, Badge } from './ui'
 
 const Challenges = () => {
 
-  const currentChallengeIndex = titles.length - 1
-  const currentChallengeNumber = currentChallengeIndex + 1
+  const currentChallengeNumber = titles.length + 25
 
   const [searchParams, setSearchParams] = useSearchParams()
   const sectionRef = useRef(null)
-  const cardsPerPage = 10
+  const cardsPerPage = 9
 
   const [isPaginationTriggered, setIsPaginationTriggered] = useState(false)
   const currentPage = parseInt(searchParams.get('page') || '1', 10)
@@ -26,8 +25,8 @@ const Challenges = () => {
   // Total number of pages
   const totalPages = Math.ceil(Cards.length / cardsPerPage)
 
-  const firstChallenge = indexOfFirstCard + 1
-  const lastChallenge = Math.min(indexOfLastCard, Cards.length)
+  const firstChallenge = indexOfFirstCard + 26
+  const lastChallenge = Math.min(indexOfLastCard + 25, Cards.length + 25)
 
   // Scroll to the section only when triggered by pagination
   useEffect(() => {
@@ -47,22 +46,27 @@ const Challenges = () => {
   }
 
   return (
-    <section ref={sectionRef} className='p-4'>
-      <h1>Challenges Section</h1>
-      <p>{currentChallengeNumber}</p>
+    <section ref={sectionRef} className='p-4 space-y-6'>
+      {/* Current Challenge */}
+      <div>
+        <p>Frederick is currently working on:</p>
+        <h5 className='text-indigo-400'>Challenge #{currentChallengeNumber}</h5>
+      </div>
       {/* Cards */}
-      <div className='grid grid-cols-3' key={currentPage}>
+      <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3' key={currentPage}>
         {currentCards.map((item, index) => (
-          <Link to={item.link} key={index} className='border p-2'>
-            <img src={item.img} alt="Challenge Thumnail" className='' />
-            <p>{item.title}</p>
-            <p>{item.day}</p>
-            <p>{item.desc}</p>
+          <Link to={item.link} key={index} className='group border border-gray-800 hover:bg-gray-800/40 rounded-2xl p-4 transition duration-300 ease-in-out'>
+            <img src={item.img} alt="Challenge Thumnail" className='w-full h-auto rounded-lg' />
+            <div className='flex justify-between items-start gap-8 mt-3.5'>
+              <h4>{item.title}</h4>
+              <Badge variant='main'>#{item.day}</Badge>
+            </div>
+            <span className='text-sm text-gray-300/80 leading-4.5 line-clamp-3 mt-1.5' dangerouslySetInnerHTML={{ __html: item.desc }}></span>
           </Link>
         ))}
       </div>
       {/* Pagination */}
-      <div className='flex justify-between items-center mt-7'>
+      <div className='flex justify-between items-center'>
         {/* Page / Number of Challenge */}
         <div>
           <h5>Page {currentPage}</h5>
@@ -93,7 +97,7 @@ const Challenges = () => {
           </Button>
         </div>
       </div>
-      {/*  */}
+      {/* Footer */}
       <footer className='flex flex-col items-center gap-12 py-12 px-4'>
         {/* Appreciation */}
         <div className='w-full max-w-md text-center space-y-4'>
