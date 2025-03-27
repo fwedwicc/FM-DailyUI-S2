@@ -3,10 +3,12 @@ export const Cards = []
 
 export const titles = [
   'Subscribe', // Day26
+  'Dropdown', // Day27
 ]
 
 const descriptions = [
   "What is a person subscribing to? A streaming service, a video course, or a consultation service? Is it just a button or a widget? What type of information are you looking to capture from the user? Their name and email? Their country, state, or postal code? Age consent? Something else?", // Day26
+  "Is it a menu dropdown? Or a tip that's dropped down during a tutorial? Or inside of a software tool to show more features? What extra information is displayed? The current price of gold? A login/logout button? Menu selections?", // Day27
 ]
 
 const images = [

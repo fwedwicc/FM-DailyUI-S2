@@ -94,7 +94,7 @@ const Hero = () => {
             },
           ].map((item, index) => (
             <div key={index} className='flex flex-col items-center gap-1 md:items-start md:text-left text-center'>
-              <div className='flex items-center gap-1 mb-1 text-gray-600'>
+              <div className='flex items-center gap-1 mb-1 text-indigo-400'>
                 {item.icon}
               </div>
               <h4>{item.title}</h4>
