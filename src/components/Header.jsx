@@ -10,7 +10,7 @@ const Header = () => {
       <img src={FMLogo} alt="FM Logo" className='md:w-6 w-5 h-auto' />
       <a href="https://github.com/fwedwicc/FM-DailyUI-S2" target='_blank' rel='noopener noreferrer'>
         <Button label={'Star it on GitHub'} variant='secondary' styles='flex-row-reverse gap-2'>
-          <SiGithub className='size-5' />
+          <SiGithub className='md:size-5 size-4' />
         </Button>
       </a>
     </header>

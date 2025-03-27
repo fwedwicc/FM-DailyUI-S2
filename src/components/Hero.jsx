@@ -2,6 +2,7 @@ import React from 'react'
 import { SiReact, SiTailwindcss, SiGithub, SiDribbble } from "react-icons/si"
 import { HiGift, HiFlag, HiBeaker, HiSparkles, HiOutlinePlusSm } from "react-icons/hi"
 import { Button, Badge } from '../components/ui'
+import { FMIllustration } from '../assets'
 
 const Hero = () => {
   return (
@@ -20,19 +21,22 @@ const Hero = () => {
           <div className='flex gap-2.5 pt-3'>
             <a href="https://dribbble.com/fwedwic" target='_blank' rel='noopener noreferrer'>
               <Button label={'Browse designs'} variant='primary'>
-                <SiDribbble className='size-5' />
+                <SiDribbble className='md:size-5 size-4' />
               </Button>
             </a>
             <a href="https://github.com/fwedwicc/FM-DailyUI-S2" target='_blank' rel='noopener noreferrer'>
-              <Button label={'Source codes'} variant='secondary'>
-                <SiGithub className='size-5' />
+              <Button label={'Source code'} variant='secondary'>
+                <SiGithub className='md:size-5 size-4' />
               </Button>
             </a>
           </div>
         </div>
         {/* Right Side / Illustration */}
-        <div className='relative md:h-auto h-56 right-0'>
-          <img src="https://placehold.co/30x30" alt="" className='absolute object-cover w-full h-full' />
+        <div className='relative md:h-auto h-48 right-0'>
+          <div className='absolute border w-18 -left-6 h-full z-20 blur-xl  bg-gray-900' />
+          <div className='absolute border w-full -top-6 h-12 z-20 blur-xl  bg-gray-900' />
+          <div className='absolute border w-full -bottom-6 md:h-18 h-10 z-20 blur-xl  bg-gray-900' />
+          <img src={FMIllustration} alt="FM Illustration" className='absolute object-cover w-full h-full' />
         </div>
       </section>
       {/* Second Section */}
@@ -44,7 +48,7 @@ const Hero = () => {
             <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 1</h5>
               <Badge text='Finished Series' styles='flex-row-reverse' variant='success'>
-                <HiSparkles className='size-4' />
+                <HiSparkles className='md:size-4 size-3' />
               </Badge>
             </div>
             <p>Challenge 1 to 25</p>
@@ -53,7 +57,7 @@ const Hero = () => {
             <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 2</h5>
               <Badge text='Currently Browsing' styles='flex-row-reverse' variant='main'>
-                <HiFlag className='size-4' />
+                <HiFlag className='md:size-4 size-3' />
               </Badge>
             </div>
             <p>Challenge 26 to 50</p>
@@ -62,7 +66,7 @@ const Hero = () => {
             <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 3</h5>
               <Badge text='Coming Soon' styles='flex-row-reverse'>
-                <HiGift className='size-4' />
+                <HiGift className='md:size-4 size-3' />
               </Badge>
             </div>
             <p>Challenge 51 to 75</p>
@@ -71,7 +75,7 @@ const Hero = () => {
             <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 4</h5>
               <Badge text='Coming Soon' styles='flex-row-reverse'>
-                <HiGift className='size-4' />
+                <HiGift className='md:size-4 size-3' />
               </Badge>
             </div>
             <p>Challenge 76 to 100</p>

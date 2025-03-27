@@ -100,19 +100,19 @@ const Challenges = () => {
       {/* Footer */}
       <footer className='flex flex-col items-center gap-12 py-12 px-4'>
         {/* Appreciation */}
-        <div className='w-full max-w-md text-center space-y-4'>
+        <div className='w-full md:max-w-md max-w-full text-center space-y-4'>
           <p>Your support means the world! If you find this helpful, please consider giving my <span className='text-white font-semibold'>GitHub repository</span> a star. Feel free to explore those works on <span className='text-white font-semibold'>Dribbble</span>. Thank you so much for your appreciation!</p>
           <div className='flex justify-center gap-3'>
             {/* Primary Button with icon-end */}
             <a href="https://github.com/fwedwicc/FM-DailyUI-S2" target='_blank' rel='noopener noreferrer'>
               <Button label={'FM DailyUI S2'} variant='outline' styles='flex-row-reverse'>
-                <SiGithub className='size-5 text-gray-400' />
+                <SiGithub className='md:size-5 size-4 text-gray-400' />
               </Button>
             </a>
             {/* Secondary Button with icon-end */}
             <a href="https://dribbble.com/fwedwic" target='_blank' rel='noopener noreferrer'>
               <Button label={'@fwedwic'} variant='outline' styles='flex-row-reverse'>
-                <SiDribbble className='size-5 text-pink-400' />
+                <SiDribbble className='md:size-5 size-4 text-pink-400' />
               </Button>
             </a>
           </div>
