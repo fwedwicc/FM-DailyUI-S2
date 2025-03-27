@@ -50,12 +50,12 @@ const Challenges = () => {
       {/* Current Challenge */}
       <div>
         <p>Frederick is currently working on:</p>
-        <h5 className='text-indigo-400'>Challenge #{currentChallengeNumber}</h5>
+        <h5 className='text-indigo-400'>Challenge <span className='text-indigo-400'>#{currentChallengeNumber}</span></h5>
       </div>
       {/* Cards */}
       <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3' key={currentPage}>
         {currentCards.map((item, index) => (
-          <Link to={item.link} key={index} className='group border border-gray-800 hover:bg-gray-800/40 rounded-2xl p-4 transition duration-300 ease-in-out'>
+          <Link to={item.link} key={index} className='group border border-gray-800 hover:bg-gray-800/40 rounded-2xl md:p-4 p-3 transition duration-300 ease-in-out'>
             <img src={item.img} alt="Challenge Thumnail" className='w-full h-auto rounded-lg' />
             <div className='flex justify-between items-start gap-8 mt-3.5'>
               <h4>{item.title}</h4>
@@ -66,9 +66,9 @@ const Challenges = () => {
         ))}
       </div>
       {/* Pagination */}
-      <div className='flex justify-between items-center'>
+      <div className='flex md:flex-row flex-col space-y-4 justify-between items-center'>
         {/* Page / Number of Challenge */}
-        <div>
+        <div className='md:text-start text-center'>
           <h5>Page {currentPage}</h5>
           <p>Challenge {firstChallenge} to {lastChallenge}</p>
         </div>
@@ -105,14 +105,14 @@ const Challenges = () => {
           <div className='flex justify-center gap-3'>
             {/* Primary Button with icon-end */}
             <a href="https://github.com/fwedwicc/FM-DailyUI-S2" target='_blank' rel='noopener noreferrer'>
-              <Button label={'@fwedwicc'} styles='bg-gray-800 hover:bg-gray-700 focus-visible:outline-gray-800 flex-row-reverse'>
-                <SiGithub className='size-5' />
+              <Button label={'FM DailyUI S2'} variant='outline' styles='flex-row-reverse'>
+                <SiGithub className='size-5 text-gray-400' />
               </Button>
             </a>
             {/* Secondary Button with icon-end */}
             <a href="https://dribbble.com/fwedwic" target='_blank' rel='noopener noreferrer'>
-              <Button label={'@fwedwic'} styles='bg-pink-500 hover:bg-pink-400 focus-visible:outline-pink-500 flex-row-reverse'>
-                <SiDribbble className='size-5' />
+              <Button label={'@fwedwic'} variant='outline' styles='flex-row-reverse'>
+                <SiDribbble className='size-5 text-pink-400' />
               </Button>
             </a>
           </div>

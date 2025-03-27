@@ -1,6 +1,6 @@
 import React from 'react'
-import { SiReact, SiTailwindcss } from "react-icons/si"
-import { HiSparkles, HiOutlinePlusSm } from "react-icons/hi"
+import { SiReact, SiTailwindcss, SiGithub, SiDribbble } from "react-icons/si"
+import { HiGift, HiFlag, HiBeaker, HiSparkles, HiOutlinePlusSm } from "react-icons/hi"
 import { Button, Badge } from '../components/ui'
 
 const Hero = () => {
@@ -9,21 +9,25 @@ const Hero = () => {
       {/* First Section */}
       <section className='grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4'>
         {/* Left Side / Content */}
-        <div className='p-4 space-y-2'>
-          <Badge text='New sasa' styles='flex-row-reverse' variant='main'>
-            <HiSparkles className='size-4' />
+        <div className='p-4 space-y-6'>
+          <Badge text='Tailwind UI Inspired' styles='flex-row-reverse' variant='main'>
+            <SiTailwindcss className='size-4' />
           </Badge>
-          <div className='space-y-1'>
-            <h1>Lorem ipsum, dolor sit amet consectetur adipis.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fuga eveniet nesciunt labore ullam nihil odio ratione officiis, vero pro.</p>
+          <div className='space-y-2'>
+            <h1><a href="https://www.dailyui.co/" target='_blank' rel='noopener noreferrer' className='underline hover:text-indigo-400 transition duration-300 ease-in-out'>Daily UI</a> Challenges: 25 Days of <span className='bg-gradient-to-r from-blue-300 to-indigo-500 bg-clip-text text-transparent'>Tailwind UI</span> Mastery</h1>
+            <p>Join me on a creative journey through 100 days of Daily UI challenges! In Series 2 (Challenges 26–50), I explore a fresh new UI approach inspired by the official Tailwind UI. Discover innovative and thoughtfully crafted designs that push the boundaries of web development and creativity.</p>
           </div>
           <div className='flex gap-2.5 pt-3'>
-            <Button label={'Primary'} variant='primary'>
-              <HiSparkles className='size-5' />
-            </Button>
-            <Button label={'Primary'} variant='secondary'>
-              <HiSparkles className='size-5' />
-            </Button>
+            <a href="https://dribbble.com/fwedwic" target='_blank' rel='noopener noreferrer'>
+              <Button label={'Browse designs'} variant='primary'>
+                <SiDribbble className='size-5' />
+              </Button>
+            </a>
+            <a href="https://github.com/fwedwicc/FM-DailyUI-S2" target='_blank' rel='noopener noreferrer'>
+              <Button label={'Source codes'} variant='secondary'>
+                <SiGithub className='size-5' />
+              </Button>
+            </a>
           </div>
         </div>
         {/* Right Side / Illustration */}
@@ -49,7 +53,7 @@ const Hero = () => {
             <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 2</h5>
               <Badge text='Currently Browsing' styles='flex-row-reverse' variant='main'>
-                <HiSparkles className='size-4' />
+                <HiFlag className='size-4' />
               </Badge>
             </div>
             <p>Challenge 26 to 50</p>
@@ -57,8 +61,8 @@ const Hero = () => {
           <div className='inline-block border border-gray-800 bg-gray-800/30 rounded-xl p-4 space-y-2 outline-2 outline-gray-400/10 outline-offset-2 opacity-60 cursor-not-allowed'>
             <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 3</h5>
-              <Badge text='Upcoming Series' styles='flex-row-reverse'>
-                <HiSparkles className='size-4' />
+              <Badge text='Coming Soon' styles='flex-row-reverse'>
+                <HiGift className='size-4' />
               </Badge>
             </div>
             <p>Challenge 51 to 75</p>
@@ -66,8 +70,8 @@ const Hero = () => {
           <div className='inline-block border border-gray-800 bg-gray-800/30 rounded-xl p-4 space-y-2 outline-2 outline-gray-400/10 outline-offset-2 opacity-60 cursor-not-allowed'>
             <div className='flex flex-wrap gap-2 justify-between items-start'>
               <h5>Series 4</h5>
-              <Badge text='Upcoming Series' styles='flex-row-reverse'>
-                <HiSparkles className='size-4' />
+              <Badge text='Coming Soon' styles='flex-row-reverse'>
+                <HiGift className='size-4' />
               </Badge>
             </div>
             <p>Challenge 76 to 100</p>
@@ -76,16 +80,16 @@ const Hero = () => {
         {/* Total designs & Tech stack */}
         <div className='lg:order-2 order-1 grid md:grid-cols-2 grid-cols-1 md:gap-2 gap-5 md:mt-6 mt-0'>
           {[
-            { icon: <HiSparkles className='size-9' />, title: '25 Curated Designs', desc: 'Lorem ipsum dolor site nihil nemo fugit voluptas Lorem ipsum dolor site nihil nemo fugit voluptas arche id vitae magni!' },
+            { icon: <HiBeaker className='size-9' />, title: '25 Curated Designs', desc: 'Discover 25 uniquely crafted UI designs that blend creativity and functionality, enhancing both aesthetics and user experience.' },
             {
               icon: <>
                 <SiReact className='size-9' />
                 <HiOutlinePlusSm className='size-5 stroke-1.5' />
                 <SiTailwindcss className='size-9' />
-              </>, title: 'React + Tailwind', desc: 'Lorem ipsum dolor site nihil nemo fugit voluptas Lorem ipsum dolor site nihil nemo fugit voluptas arche id vitae magni!'
+              </>, title: 'React + Tailwind', desc: "Built with React and Tailwind CSS, this collection delivers sleek, responsive, and modern UI components for seamless web development."
             },
           ].map((item, index) => (
-            <div key={index} className='flex flex-col items-center md:items-start md:text-left text-center'>
+            <div key={index} className='flex flex-col items-center gap-1 md:items-start md:text-left text-center'>
               <div className='flex items-center gap-1 mb-1 text-gray-600'>
                 {item.icon}
               </div>
