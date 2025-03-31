@@ -32,8 +32,12 @@ const Draft = () => {
             {/* End */}
             <div className='md:flex hidden items-center gap-2'>
               <Badge text='Ctrl K' styles='me-3 cursor-pointer' />
-              <Button label={'Secondary'} variant='secondary' />
-              <Button label={'Primary'} variant='primary' />
+              <Button label={'Secondary'} variant='secondary'>
+                <HiOutlineStar className='size-5' />
+              </Button>
+              <Button label={'Primary'} variant='primary'>
+                <HiOutlineStar className='size-5' />
+              </Button>
             </div>
           </nav>
           {/* Dropdown Menu */}
