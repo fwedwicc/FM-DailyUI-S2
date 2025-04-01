@@ -1,18 +1,21 @@
-import { DefaultThumbnail, Day26Thumbnail } from '../assets/thumbnail'
+import { DefaultThumbnail, Day26Thumbnail, Day27Thumbnail } from '../assets/thumbnail'
 export const Cards = []
 
 export const titles = [
   'Subscribe', // Day26
   'Dropdown', // Day27
+  'Contact Page', // Day28
 ]
 
 const descriptions = [
   "What is a person subscribing to? A streaming service, a video course, or a consultation service? Is it just a button or a widget? What type of information are you looking to capture from the user? Their name and email? Their country, state, or postal code? Age consent? Something else?", // Day26
   "Is it a menu dropdown? Or a tip that's dropped down during a tutorial? Or inside of a software tool to show more features? What extra information is displayed? The current price of gold? A login/logout button? Menu selections?", // Day27
+  "Is it for customer support? A purchase inquiry? To schedule an appointment? Is it a full page or just a form? Imagine a scenario and the most important feature it would require. Contact pages are some of the most visited pages on websites so it's important to have the most critical information, but not so much that people get lost.", // Day28
 ]
 
 const images = [
   Day26Thumbnail, // Day26
+  Day27Thumbnail, // Day27
 ]
 
 const defaultImage = DefaultThumbnail
