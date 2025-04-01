@@ -16,6 +16,8 @@ const BadgeCollection = () => {
       <div className='flex flex-wrap gap-3'>
         {/* Default Badge */}
         <Badge text='Hello world' />
+        {/* Main Badge */}
+        <Badge text='Hello world' variant='main' />
         {/* Success Badge */}
         <Badge text='Hello world' variant='success' />
         {/* Warning Badge */}
@@ -24,6 +26,10 @@ const BadgeCollection = () => {
         <Badge text='Hello world' variant='error' />
         {/* Default Badge with icon-start */}
         <Badge text='Hello world'>
+          <HiStar className='size-4' />
+        </Badge>
+        {/* Main Badge with icon-start */}
+        <Badge text='Hello world' variant='main'>
           <HiStar className='size-4' />
         </Badge>
         {/* Success Badge with icon-start */}
@@ -40,6 +46,10 @@ const BadgeCollection = () => {
         </Badge>
         {/* Default Badge with icon-end */}
         <Badge text='Hello world' styles='flex-row-reverse'>
+          <HiStar className='size-4' />
+        </Badge>
+        {/* Main Badge with icon-end */}
+        <Badge text='Hello world' variant='main' styles='flex-row-reverse'>
           <HiStar className='size-4' />
         </Badge>
         {/* Success Badge with icon-end */}

@@ -13,7 +13,7 @@ const ButtonCollection = () => {
       className='border border-gray-800 p-4 rounded-2xl space-y-4'
     >
       <h3>Button Components</h3>
-      <div className='flex flex-wrap gap-4'>
+      <div className='flex flex-wrap items-center gap-4'>
         {/* Primary Button */}
         <Button label={'Primary'} variant='primary'>
         </Button>
@@ -56,6 +56,22 @@ const ButtonCollection = () => {
         </Button>
         {/* Outline Button with icon-end */}
         <Button label={'Outline'} variant='outline' styles='flex-row-reverse'>
+          <HiOutlineStar className='size-5' />
+        </Button>
+        {/* Primary Button - Icon */}
+        <Button variant='primary' iconButton>
+          <HiOutlineStar className='size-5' />
+        </Button>
+        {/* Secondary Button - Icon */}
+        <Button variant='secondary' iconButton>
+          <HiOutlineStar className='size-5' />
+        </Button>
+        {/* Ghost Button - Icon */}
+        <Button variant='ghost' iconButton>
+          <HiOutlineStar className='size-5' />
+        </Button>
+        {/* Outline Button - Icon */}
+        <Button variant='outline' iconButton>
           <HiOutlineStar className='size-5' />
         </Button>
       </div>
