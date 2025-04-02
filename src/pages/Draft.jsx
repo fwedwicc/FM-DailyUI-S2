@@ -21,7 +21,7 @@ const Draft = () => {
               <p>Please complete this form to discuss your concerns in detail.</p>
             </div>
             {/* Form */}
-            <form className='grid grid-cols-2 gap-3'>
+            <form className='grid grid-cols-2 gap-3 border border-yellow-400/30'>
               <p className='col-span-full'>What kind of client are you?</p>
               <label
                 htmlFor="radio-1"
@@ -61,7 +61,7 @@ const Draft = () => {
                 type="text"
                 label="Username"
                 placeholder="E.g fwedwicc"
-                styles="w-auto"
+                styles="w-auto border border-yellow-400/30"
               />
               <Input
                 id="username"
@@ -69,7 +69,7 @@ const Draft = () => {
                 type="text"
                 label="Username"
                 placeholder="E.g fwedwicc"
-                styles="w-auto"
+                styles="w-auto border border-yellow-400/30"
               />
               <Input
                 id="username"
@@ -77,9 +77,9 @@ const Draft = () => {
                 type="text"
                 label="Username"
                 placeholder="E.g fwedwicc"
-                styles="col-span-full"
+                styles="col-span-full border border-yellow-400/30"
               />
-              <div className='mt-4'>
+              <div className='mt-4 border border-yellow-400/30'>
                 <Button label={'Submit Inquiry'} variant='primary'>
                   <HiOutlineStar className='size-5' />
                 </Button>

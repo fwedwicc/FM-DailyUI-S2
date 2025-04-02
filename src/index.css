@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@layer base {
+  [type="radio"] {
+    @apply appearance-none size-4 border border-gray-800 rounded-full bg-transparent transition duration-300 ease-in-out;
+  }
+
+  [type="radio"]:checked {
+    @apply bg-indigo-500 border-gray-900 border-2 outline-2 outline-indigo-500 transition-all duration-300 ease-in-out;
+  }
+}
 body {
   @apply bg-gray-900;
   font-family: "Inter", sans-serif;
