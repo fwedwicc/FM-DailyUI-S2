@@ -6,6 +6,7 @@ import ButtonCollection from './ButtonCollection'
 import InputCollection from './InputCollection'
 import BadgeCollection from './BadgeCollection'
 import RadioCollection from './RadioCollection'
+import CheckboxCollection from './CheckboxCollection'
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   InputCollection,
   BadgeCollection,
   RadioCollection,
+  CheckboxCollection,
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Input, Button } from '../components/ui'
-import { HiOutlineStar } from "react-icons/hi"
+import { Input, Button, Radio, Checkbox, Icon, Textarea } from '../components/ui'
+import { HiOutlineStar, HiCheck } from "react-icons/hi"
 
 const Draft = () => {
   return (
@@ -22,39 +22,49 @@ const Draft = () => {
             </div>
             {/* Form */}
             <form className='grid grid-cols-2 gap-3 border border-yellow-400/30'>
-              <p className='col-span-full'>What kind of client are you?</p>
-              <label
-                htmlFor="radio-1"
-                className="flex w-full items-center justify-between gap-4 rounded-lg border border-gray-700/40 bg-gray-800/20 p-3 transition-all duration-300 ease-in-out hover:bg-gray-800/60 cursor-pointer has-checked:border-indigo-500 has-checked:ring-1 has-checked:ring-indigo-500"
-              >
-                <div>
-                  <p>Standard</p>
-                  <p>Free</p>
+              {/* Client Type */}
+              <div className='space-y-2 col-span-full'>
+                <p>What kind of client are you?</p>
+                <div className='grid grid-cols-2 gap-3'>
+                  {/* Radio 1 */}
+                  <Radio
+                    variant='group-radio'
+                    name='center-end-radio'
+                    value='center-end-radio-1'
+                    id='center-end-radio-1'
+                    styles='rounded-xl w-full items-center'
+                  >
+                    <div className='flex items-start gap-3'>
+                      <Icon styles='size-12'>
+                        <HiOutlineStar className='size-6 text-gray-300' />
+                      </Icon>
+                      <div>
+                        <p>Standard</p>
+                        <p>Free</p>
+                      </div>
+                    </div>
+                  </Radio>
+                  {/* Radio 2 */}
+                  <Radio
+                    variant='group-radio'
+                    name='center-end-radio'
+                    value='center-end-radio-2'
+                    id='center-end-radio-2'
+                    styles='rounded-xl w-full items-center'
+                  >
+                    <div className='flex items-start gap-3'>
+                      <Icon styles='size-12'>
+                        <HiOutlineStar className='size-6 text-gray-300' />
+                      </Icon>
+                      <div>
+                        <p>Standard</p>
+                        <p>Free</p>
+                      </div>
+                    </div>
+                  </Radio>
                 </div>
-                <input
-                  type="radio"
-                  name="custom-radio"
-                  value="radio-1"
-                  id="radio-1"
-                  className="size-5 border-gray-700"
-                />
-              </label>
-              <label
-                htmlFor="radio-2"
-                className="flex w-full items-center justify-between gap-4 rounded-lg border border-gray-700/40 bg-gray-800/20 p-3 transition-all duration-300 ease-in-out hover:bg-gray-800/60 cursor-pointer has-checked:border-indigo-500 has-checked:ring-1 has-checked:ring-indigo-500"
-              >
-                <div>
-                  <p>Standard</p>
-                  <p>Free</p>
-                </div>
-                <input
-                  type="radio"
-                  name="custom-radio"
-                  value="radio-2"
-                  id="radio-2"
-                  className="size-5 border-gray-700"
-                />
-              </label>
+              </div>
+              {/* Complete Name */}
               <Input
                 id="username"
                 name="username"
@@ -63,6 +73,7 @@ const Draft = () => {
                 placeholder="E.g fwedwicc"
                 styles="w-auto border border-yellow-400/30"
               />
+              {/* Email Address */}
               <Input
                 id="username"
                 name="username"
@@ -71,14 +82,87 @@ const Draft = () => {
                 placeholder="E.g fwedwicc"
                 styles="w-auto border border-yellow-400/30"
               />
-              <Input
+              {/* I am interested in: */}
+              <div className='col-span-full space-y-2'>
+                <p>What kind of client are you?</p>
+                <div className='flex flex-wrap items-center gap-2'>
+                  {/* Checkbox 1 */}
+                  <Checkbox
+                    variant='group-checkbox'
+                    name='hidden-toggle-checkbox'
+                    value='hidden-toggle-checkbox-1'
+                    id='hidden-toggle-checkbox-1'
+                    styles='w-auto items-center'
+                    checkboxStyles='hidden'
+                  >
+                    <p>lorem</p>
+                  </Checkbox>
+                  {/* Checkbox 2 */}
+                  <Checkbox
+                    variant='group-checkbox'
+                    name='hidden-toggle-checkbox'
+                    value='hidden-toggle-checkbox-2'
+                    id='hidden-toggle-checkbox-2'
+                    styles='w-auto items-center'
+                    checkboxStyles='hidden'
+                  >
+                    <p>Premium</p>
+                  </Checkbox>
+                  {/* Checkbox 3 */}
+                  <Checkbox
+                    variant='group-checkbox'
+                    name='hidden-toggle-checkbox'
+                    value='hidden-toggle-checkbox-3'
+                    id='hidden-toggle-checkbox-3'
+                    styles='w-auto items-center'
+                    checkboxStyles='hidden'
+                  >
+                    <p>Premium</p>
+                  </Checkbox>
+                  {/* Checkbox 4 */}
+                  <Checkbox
+                    variant='group-checkbox'
+                    name='hidden-toggle-checkbox'
+                    value='hidden-toggle-checkbox-4'
+                    id='hidden-toggle-checkbox-4'
+                    styles='w-auto items-center'
+                    checkboxStyles='hidden'
+                  >
+                    <p>Premium</p>
+                  </Checkbox>
+                  {/* Checkbox 5 */}
+                  <Checkbox
+                    variant='group-checkbox'
+                    name='hidden-toggle-checkbox'
+                    value='hidden-toggle-checkbox-5'
+                    id='hidden-toggle-checkbox-5'
+                    styles='w-auto items-center'
+                    checkboxStyles='hidden'
+                  >
+                    <p>Premium</p>
+                  </Checkbox>
+                  {/* Checkbox 6 */}
+                  <Checkbox
+                    variant='group-checkbox'
+                    name='hidden-toggle-checkbox'
+                    value='hidden-toggle-checkbox-6'
+                    id='hidden-toggle-checkbox-6'
+                    styles='w-auto items-center'
+                    checkboxStyles='hidden'
+                  >
+                    <p>Premium</p>
+                  </Checkbox>
+                </div>
+              </div>
+              {/* Message */}
+              <Textarea
                 id="username"
-                name="username"
-                type="text"
+                rows='2'
                 label="Username"
                 placeholder="E.g fwedwicc"
                 styles="col-span-full border border-yellow-400/30"
               />
+              {/* Submit Button */}
               <div className='mt-4 border border-yellow-400/30'>
                 <Button label={'Submit Inquiry'} variant='primary'>
                   <HiOutlineStar className='size-5' />
