@@ -25,7 +25,7 @@ const Radio = ({ variant, name, value, id, label, styles, radioStyles, icon, chi
             name={name}
             value={value}
             id={id}
-            className={`${radioStyles} accent-indigo-500`}
+            className={`${radioStyles} accent-indigo-500 shrink-0`}
           />
         </label>
       ) : variant === 'custom-radio' ? (
