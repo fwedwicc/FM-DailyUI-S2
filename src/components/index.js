@@ -5,6 +5,7 @@ import Footer from './Footer'
 import ButtonCollection from './ButtonCollection'
 import InputCollection from './InputCollection'
 import BadgeCollection from './BadgeCollection'
+import RadioCollection from './RadioCollection'
 
 export {
   Header,
@@ -13,5 +14,6 @@ export {
   Footer,
   ButtonCollection,
   InputCollection,
-  BadgeCollection
+  BadgeCollection,
+  RadioCollection,
 }
