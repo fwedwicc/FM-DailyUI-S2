@@ -1,10 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import useScrollToTop from '../hooks/useScrollToTop'
 import { FMLogo, FMIllustration } from '../assets'
 import { Button, Badge } from '../components/ui'
 import { HiChevronDown, HiChevronUp, HiOutlineFlag, HiOutlineCollection, HiOutlineMap, HiOutlineUserGroup, HiOutlineCubeTransparent, HiOutlineLightningBolt, HiSparkles, HiArrowSmRight, HiOutlineSearch, HiMenuAlt3 } from "react-icons/hi"
 
 const Day27 = () => {
+
+  useScrollToTop()
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

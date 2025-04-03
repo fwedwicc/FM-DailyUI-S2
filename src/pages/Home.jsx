@@ -1,8 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import useScrollRestoration from '../hooks/useScrollRestoration';
 import { Header, Hero, Challenges, Footer } from '../components'
 
 const Home = () => {
+
+  useScrollRestoration()
+
   return (
     <motion.main
       initial={{ opacity: 0 }}

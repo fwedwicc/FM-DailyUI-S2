@@ -1,10 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import useScrollToTop from '../hooks/useScrollToTop'
 import { Input, Button, Radio, Checkbox, Icon, Textarea, Badge } from '../components/ui'
 import { HiChat, HiOutlineArrowSmRight, HiOutlinePaperAirplane, HiOutlineChat, HiOutlineFlag, HiOutlinePhone, HiOutlineOfficeBuilding, HiOutlineUser } from "react-icons/hi"
 import { SiLinkedin, SiInstagram, SiFacebook, SiX } from "react-icons/si"
 
 const Day28 = () => {
+
+  useScrollToTop()
 
   const Link = ({ children, styles }) => {
     return (

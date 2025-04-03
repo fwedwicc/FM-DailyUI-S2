@@ -1,8 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import useScrollToTop from '../hooks/useScrollToTop'
 import { ButtonCollection, InputCollection, BadgeCollection, RadioCollection, CheckboxCollection } from '../components'
 
 const UICollection = () => {
+
+  useScrollToTop()
+
   return (
     <motion.main
       initial={{ opacity: 0 }}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import useScrollToTop from '../hooks/useScrollToTop'
 import { Input, Button, Icon } from '../components/ui'
 import { ImageIllustration } from '../assets/day26'
 import { FMLogo } from '../assets'
@@ -7,6 +8,8 @@ import { HiCalendar, HiShieldCheck, HiOutlinePaperAirplane, HiOutlineMail, HiOut
 import { SiLinkedin, SiInstagram, SiFacebook, SiX } from "react-icons/si"
 
 const Day26 = () => {
+
+  useScrollToTop()
 
   const Link = ({ children, styles }) => {
     return (
