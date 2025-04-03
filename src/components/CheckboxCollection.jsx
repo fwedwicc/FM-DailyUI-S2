@@ -21,34 +21,38 @@ const CheckboxCollection = () => {
             name='default-checkbox'
             value='default-checkbox-1'
             id='default-checkbox-1'
-            label='Standard'
-          />
+          >
+            <label htmlFor='default-checkbox-1' className='text-gray-300'>Standard</label>
+          </Checkbox>
           <Checkbox
             variant='default'
             name='default-checkbox'
             value='default-checkbox-2'
             id='default-checkbox-2'
-            label='Premium'
-          />
+          >
+            <label htmlFor='default-checkbox-2' className='text-gray-300'>Premium</label>
+          </Checkbox>
         </div>
         {/* Default Checkbox - reverse */}
         <div className='flex gap-3'>
           <Checkbox
             variant='default'
-            name='default-checkbox'
-            value='default-checkbox-1'
-            id='default-checkbox-1'
-            label='Standard'
+            name='reverse-checkbox'
+            value='reverse-checkbox-1'
+            id='reverse-checkbox-1'
             styles='flex-row-reverse'
-          />
+          >
+            <label htmlFor='reverse-checkbox-1' className='text-gray-300'>Standard</label>
+          </Checkbox>
           <Checkbox
             variant='default'
-            name='default-checkbox'
-            value='default-checkbox-2'
-            id='default-checkbox-2'
-            label='Premium'
+            name='reverse-checkbox'
+            value='reverse-checkbox-2'
+            id='reverse-checkbox-2'
             styles='flex-row-reverse'
-          />
+          >
+            <label htmlFor='reverse-checkbox-2' className='text-gray-300'>Premium</label>
+          </Checkbox>
         </div>
         {/* Group Checkbox with hidden toggle */}
         <div className='flex w-auto gap-3'>

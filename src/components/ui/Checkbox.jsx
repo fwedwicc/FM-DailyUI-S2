@@ -12,7 +12,7 @@ const Checkbox = ({ variant, name, value, id, label, styles, checkboxStyles, ico
             id={id}
             className="accent-indigo-500"
           />
-          <label htmlFor={id} className='text-gray-300'>{label}</label>
+          {children}
         </div>
       ) : variant === 'group-checkbox' ? (
         <label
