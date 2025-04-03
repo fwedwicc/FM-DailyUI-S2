@@ -21,11 +21,11 @@ const Draft = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className='grid lg:grid-cols-2 grid-cols-1 md:gap-12 gap-4 lg:min-h-screen border border-yellow-400/30'>
+      <div className='grid lg:grid-cols-2 grid-cols-1 md:gap-12 gap-4 lg:min-h-screen'>
         {/* Contact Information */}
-        <div className='flex flex-col justify-between md:gap-0 gap-12 md:py-12 py-8 md:pl-12 pl-8 md:pr-0 pr-8 border border-yellow-400/30'>
+        <div className='md:order-1 order-2 flex flex-col justify-between md:gap-0 gap-12 md:py-12 py-4 md:pl-12 pl-4 md:pr-0 pr-4'>
           {/* Start */}
-          <div className='space-y-3 border border-yellow-400/30'>
+          <div className='space-y-3'>
             <Badge text='Reach out to us!' variant='main' styles='flex-row-reverse'>
               <HiChat className='size-4' />
             </Badge>
@@ -33,7 +33,7 @@ const Draft = () => {
             <p className='max-w-2xl'> Whether you're looking for expert guidance, have a vision in mind, or need a custom web solution that fits to your needs, we’re here to help! Let’s collaborate to turn your ideas into reality, just share your thoughts.</p>
           </div>
           {/* Middle */}
-          <div className='grid grid-cols-2 gap-3 border border-yellow-400/30'>
+          <div className='grid md:grid-cols-2 grid-cols-1 gap-3'>
             {[
               { icon: HiOutlineChat, title: 'Chat with us!', desc: 'Need help? Our friendly team is just a message away.', link: 'chatsupport@fm.com' },
               { icon: HiOutlineFlag, title: 'Visit our office!', desc: 'Drop by and say hello to our office—we’d love to meet you!', link: '100 Smith Street, Manila, PH' },
@@ -57,7 +57,7 @@ const Draft = () => {
             ))}
           </div>
           {/* End */}
-          <div className='space-x-2 border border-yellow-400/30'>
+          <div className='space-x-2'>
             {[
               { icon: SiLinkedin },
               { icon: SiX },
@@ -71,19 +71,19 @@ const Draft = () => {
           </div>
         </div>
         {/* Contact Form */}
-        <div className='flex flex-col justify-center w-full md:py-12 py-8 md:pr-12 pr-8 md:pl-0 pl-8 border border-yellow-400/30'>
-          <div className='border border-yellow-400/30 space-y-8'>
+        <div className='md:order-2 order-1 flex flex-col justify-center w-full md:py-12 py-4 md:pr-12 pr-4 md:pl-0 pl-4'>
+          <div className='space-y-8'>
             {/* Header */}
             <div>
               <h2>Let's chat!</h2>
               <p>Kindly complete this form to discuss your concerns in detail.</p>
             </div>
             {/* Form */}
-            <form className='grid grid-cols-2 gap-3 border border-yellow-400/30'>
+            <form className='grid md:grid-cols-2 grid-cols-1 gap-3'>
               {/* Client Type */}
               <div className='space-y-2 col-span-full'>
                 <p>Who are you signing up as?</p>
-                <div className='grid grid-cols-2 gap-3'>
+                <div className='grid md:grid-cols-2 grid-cols-1 gap-3'>
                   {/* Radio 1 */}
                   <Radio
                     variant='group-radio'
@@ -129,7 +129,7 @@ const Draft = () => {
                 type="text"
                 label="Complete Name"
                 placeholder="E.g John Doe"
-                styles="w-auto border border-yellow-400/30"
+                styles="w-auto"
               />
               {/* Email Address */}
               <Input
@@ -138,7 +138,7 @@ const Draft = () => {
                 type="email"
                 label="Email Address"
                 placeholder="E.g sample@fm.com"
-                styles="w-auto border border-yellow-400/30"
+                styles="w-auto"
               />
               {/* I am interested in: */}
               <div className='col-span-full space-y-2'>
@@ -218,17 +218,17 @@ const Draft = () => {
                 rows='2'
                 label="Your Message:"
                 placeholder="E.g I'd like to request a website and app."
-                styles="col-span-full border border-yellow-400/30"
+                styles="col-span-full"
               />
               {/* Submit Button */}
-              <div className='mt-4 border border-yellow-400/30'>
+              <div className='col-span-full mt-2'>
                 <Button label={'Submit Inquiry'} variant='primary'>
                   <HiOutlinePaperAirplane className='size-5 rotate-90' />
                 </Button>
               </div>
             </form>
             {/* Note */}
-            <div className='p-4 rounded-xl bg-gray-800/30 border border-yellow-400/30'>
+            <div className='p-4 rounded-xl bg-gray-800/30 border border-gray-800'>
               <p><strong>Note:</strong> After you submit this form, we'll reach out to you via email to discuss your inquiry or concern in more detail. we'll make sure to get back to you as soon as possible, so we can start addressing your needs right away!</p>
             </div>
           </div>
