@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Button } from '../components/ui'
+import { HiOutlineMenuAlt1, HiOutlineRefresh, HiOutlineBookmark, HiOutlineDeviceMobile, HiOutlineViewGrid } from "react-icons/hi"
 import useScrollToTop from '../hooks/useScrollToTop'
 
 const Draft = () => {
@@ -15,16 +17,39 @@ const Draft = () => {
       className='md:min-h-screen border border-yellow-300/40'
     >
       {/* Side Navigation - Large Screen */}
-      <aside className='z-50 h-screen fixed lg:flex hidden w-20 border border-yellow-300/40'>
-        <p>asayd</p>
+      <aside className='z-50 h-screen fixed p-3 lg:flex flex-col items-center justify-between hidden w-20 border border-yellow-300/40'>
+        {/* Start */}
+        <div className='flex flex-col items-center gap-1'>
+          <Button variant='ghost' iconButton styles='mb-3'>
+            <HiOutlineMenuAlt1 className='size-5 stroke-[1.3px]' />
+          </Button>
+          <Button variant='ghost' label='Saved' styles='flex-col-reverse'>
+            <HiOutlineBookmark className='size-6 stroke-[1.3px]' />
+          </Button>
+          <Button variant='ghost' label='Recent' styles='flex-col-reverse'>
+            <HiOutlineRefresh className='size-6 stroke-[1.3px]' />
+          </Button>
+        </div>
+        {/* End */}
+        <Button variant='ghost' label='Install app' styles='flex-col-reverse'>
+          <HiOutlineDeviceMobile className='size-6 stroke-[1.3px]' />
+        </Button>
       </aside>
       {/* Navigation */}
       <nav className='z-40 fixed flex items-center lg:justify-end justify-between w-full p-2 border border-yellow-300/40'>
         {/* Button Toggle for Side Nav - Small Screen */}
-        <div className='lg:hidden block border border-yellow-300/40'>
-          <h5>Nav</h5>
+        <Button variant='ghost' iconButton styles='lg:hidden flex'>
+          <HiOutlineMenuAlt1 className='size-5 stroke-[1.3px]' />
+        </Button>
+        {/* Other Actions */}
+        <div className='flex items-center gap-3 p-3'>
+          <Button variant='ghost' iconButton>
+            <HiOutlineViewGrid className='size-5 stroke-[1.3px]' />
+          </Button>
+          <Button variant='ghost' iconButton>
+            <HiOutlineMenuAlt1 className='size-5 stroke-[1.3px]' />
+          </Button>
         </div>
-        <h5>Nav</h5>
       </nav>
       {/* Main Content */}
       <main className='grid lg:grid-cols-3 grid-cols-1 lg:ml-20 ml-0 h-screen border border-yellow-300/40'>

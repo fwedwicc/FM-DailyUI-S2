@@ -2,9 +2,9 @@ import React from 'react'
 
 const Input = ({ label, placeholder, id, type, name, styles, required, inputStyles }) => {
   return (
-    <div className={`flex flex-col gap-y-1.5 ${styles}`}>
-      <div className='flex items-start gap-1'>
-        <label htmlFor={id} className={`${label ? '' : 'sr-only'} md:text-base text-sm text-gray-200`}>
+    <div className={`flex flex-col ${styles}`}>
+      <div className='flex items-start'>
+        <label htmlFor={id} className={`${label ? '' : 'sr-only'} md:text-base text-sm text-gray-200 mb-1.5`}>
           {label}
         </label>
         {required && <span className='text-red-400'>*</span>}

@@ -58,6 +58,22 @@ const ButtonCollection = () => {
         <Button label={'Outline'} variant='outline' styles='flex-row-reverse'>
           <HiOutlineStar className='size-5' />
         </Button>
+        {/* Icon-text col - Primary */}
+        <Button variant='primary' label='Primary' styles='flex-col-reverse'>
+          <HiOutlineStar className='size-6' />
+        </Button>
+        {/* Icon-text col - Secondary */}
+        <Button variant='secondary' label='Secondary' styles='flex-col-reverse'>
+          <HiOutlineStar className='size-6' />
+        </Button>
+        {/* Icon-text col - Ghost */}
+        <Button variant='ghost' label='Ghost' styles='flex-col-reverse'>
+          <HiOutlineStar className='size-6' />
+        </Button>
+        {/* Icon-text col - Outline */}
+        <Button variant='outline' label='Outline' styles='flex-col-reverse'>
+          <HiOutlineStar className='size-6' />
+        </Button>
         {/* Primary Button - Icon */}
         <Button variant='primary' iconButton>
           <HiOutlineStar className='size-5' />
