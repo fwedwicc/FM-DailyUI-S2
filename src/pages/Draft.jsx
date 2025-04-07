@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Button } from '../components/ui'
+import { Button, Avatar, Input } from '../components/ui'
 import { HiOutlineMenuAlt1, HiOutlineRefresh, HiOutlineBookmark, HiOutlineDeviceMobile, HiOutlineViewGrid } from "react-icons/hi"
 import useScrollToTop from '../hooks/useScrollToTop'
 
@@ -46,17 +46,50 @@ const Draft = () => {
           <Button variant='ghost' iconButton>
             <HiOutlineViewGrid className='size-5 stroke-[1.3px]' />
           </Button>
-          <Button variant='ghost' iconButton>
-            <HiOutlineMenuAlt1 className='size-5 stroke-[1.3px]' />
-          </Button>
+          <Avatar
+            type='profile'
+            size='size-9'
+            image='https://placehold.co/30x30'
+            outline='outline-2 outline-offset-2 outline-indigo-500'
+            styles='cursor-pointer'
+          />
         </div>
       </nav>
       {/* Main Content */}
       <main className='grid lg:grid-cols-3 grid-cols-1 lg:ml-20 ml-0 h-screen border border-yellow-300/40'>
         {/* Side Content */}
-        <div className='lg:order-1 order-2 col-span-1 overflow-auto h-full border border-yellow-300/40'>
-          <h1>Side Content</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto temporibus obcaecati non cumque nostrum eveniet nihil amet? Repellat odio quidem corporis, deserunt itaque ex nam nemo porro neque rem aspernatur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto temporibus obcaecati non cumque nostrum eveniet nihil amet? Repellat odio quidem corporis, deserunt itaque ex nam nemo porro neque rem aspernatur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto temporibus obcaecati non cumque nostrum eveniet nihil amet? Repellat odio quidem corporis, deserunt itaque ex nam nemo porro neque rem aspernatur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto temporibus obcaecati non cumque nostrum eveniet nihil amet? Repellat odio quidem corporis, deserunt itaque ex nam nemo porro neque rem aspernatur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto temporibus obcaecati non cumque nostrum eveniet nihil amet? Repellat odio quidem corporis, deserunt itaque ex nam nemo porro neque rem aspernatur?</p>
+        <div className='z-50 p-4 lg:order-1 order-2 col-span-1 overflow-auto h-full border border-yellow-300/40'>
+          {/* Search */}
+          <div className='relative'>
+            <Input
+              id="username"
+              name="username"
+              type="text"
+              placeholder="E.g fwedwicc"
+              styles="w-auto"
+              inputStyles='pr-24 px-3 py-3 rounded-xl'
+            />
+            <div className='flex absolute right-2 top-1/2 -translate-y-1/2 gap-1'>
+              <Button variant='ghost' iconButton>
+                <HiOutlineMenuAlt1 className='size-5' />
+              </Button>
+              <Button variant='ghost' iconButton>
+                <HiOutlineMenuAlt1 className='size-5' />
+              </Button>
+            </div>
+          </div>
+          {/* Filters */}
+          <div className='flex items-center gap-2'>
+            <Button variant='outline' label='Install app' styles=''>
+              <HiOutlineDeviceMobile className='size-6 stroke-[1.3px]' />
+            </Button>
+            <Button variant='outline' label='Install app' styles=''>
+              <HiOutlineDeviceMobile className='size-6 stroke-[1.3px]' />
+            </Button>
+            <Button variant='outline' label='Install app' styles=''>
+              <HiOutlineDeviceMobile className='size-6 stroke-[1.3px]' />
+            </Button>
+          </div>
         </div>
         {/* Map */}
         <div className='lg:h-screen h-94 lg:order-2 order-1 col-span-2 border border-yellow-300/40'>
