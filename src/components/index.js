@@ -8,6 +8,7 @@ import BadgeCollection from './BadgeCollection'
 import AvatarCollection from './AvatarCollection'
 import RadioCollection from './RadioCollection'
 import CheckboxCollection from './CheckboxCollection'
+import DropdownCollection from './DropdownCollection'
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   AvatarCollection,
   RadioCollection,
   CheckboxCollection,
+  DropdownCollection,
 }

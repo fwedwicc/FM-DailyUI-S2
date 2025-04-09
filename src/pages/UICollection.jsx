@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import useScrollToTop from '../hooks/useScrollToTop'
-import { ButtonCollection, InputCollection, BadgeCollection, AvatarCollection, RadioCollection, CheckboxCollection } from '../components'
+import { ButtonCollection, InputCollection, BadgeCollection, AvatarCollection, RadioCollection, CheckboxCollection, DropdownCollection } from '../components'
 
 const UICollection = () => {
 
@@ -17,6 +17,8 @@ const UICollection = () => {
     >
       {/* Button Components */}
       <ButtonCollection />
+      {/* Dropdown Components */}
+      <DropdownCollection />
       {/* Input Components */}
       <InputCollection />
       {/* Badge Components */}

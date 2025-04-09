@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Button, Avatar, Input } from '../components/ui'
+import { Button, Dropdown, Avatar, Input } from '../components/ui'
 import { HiOutlineMenuAlt1, HiOutlineRefresh, HiOutlineBookmark, HiOutlineDeviceMobile, HiOutlineViewGrid } from "react-icons/hi"
 import useScrollToTop from '../hooks/useScrollToTop'
 
@@ -58,7 +58,7 @@ const Draft = () => {
       {/* Main Content */}
       <main className='grid lg:grid-cols-3 grid-cols-1 lg:ml-20 ml-0 h-screen border border-yellow-300/40'>
         {/* Side Content */}
-        <div className='z-50 p-4 lg:order-1 order-2 col-span-1 overflow-auto h-full border border-yellow-300/40'>
+        <div className='z-50 p-4 space-y-4 lg:order-1 order-2 col-span-1 overflow-auto h-full border border-yellow-300/40'>
           {/* Search */}
           <div className='relative'>
             <Input
@@ -78,17 +78,45 @@ const Draft = () => {
               </Button>
             </div>
           </div>
+          {/*  */}
+          <div className='flex items-center justify-between'>
+            <h4>Results</h4>
+            <Button variant='outline' label='Share' size='sm' styles='text-blue-300'>
+              <HiOutlineDeviceMobile className='size-4 stroke-[1.3px]' />
+            </Button>
+          </div>
           {/* Filters */}
           <div className='flex items-center gap-2'>
-            <Button variant='outline' label='Install app' styles=''>
-              <HiOutlineDeviceMobile className='size-6 stroke-[1.3px]' />
-            </Button>
-            <Button variant='outline' label='Install app' styles=''>
-              <HiOutlineDeviceMobile className='size-6 stroke-[1.3px]' />
-            </Button>
-            <Button variant='outline' label='Install app' styles=''>
-              <HiOutlineDeviceMobile className='size-6 stroke-[1.3px]' />
-            </Button>
+            <Dropdown
+              variant="secondary"
+              size="md"
+              label="Options"
+              icon={<HiOutlineRefresh className="size-4" />}
+            >
+              <Button label={'Option 1'} variant='ghost' styles='hover:bg-gray-900' />
+              <Button label={'Option 2'} variant='ghost' styles='hover:bg-gray-900' />
+              <Button label={'Option 3'} variant='ghost' styles='hover:bg-gray-900' />
+            </Dropdown>
+            <Dropdown
+              variant="secondary"
+              size="md"
+              label="Options"
+              icon={<HiOutlineRefresh className="size-4" />}
+            >
+              <Button label={'Option 1'} variant='ghost' styles='hover:bg-gray-900' />
+              <Button label={'Option 2'} variant='ghost' styles='hover:bg-gray-900' />
+              <Button label={'Option 3'} variant='ghost' styles='hover:bg-gray-900' />
+            </Dropdown>
+            <Dropdown
+              variant="secondary"
+              size="md"
+              label="Options"
+              icon={<HiOutlineRefresh className="size-4" />}
+            >
+              <Button label={'Option 1'} variant='ghost' styles='hover:bg-gray-900' />
+              <Button label={'Option 2'} variant='ghost' styles='hover:bg-gray-900' />
+              <Button label={'Option 3'} variant='ghost' styles='hover:bg-gray-900' />
+            </Dropdown>
           </div>
         </div>
         {/* Map */}

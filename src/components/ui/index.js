@@ -6,6 +6,7 @@ import Avatar from './Avatar'
 import Radio from './Radio'
 import Checkbox from './Checkbox'
 import Textarea from './Textarea'
+import Dropdown from './Dropdown'
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   Radio,
   Checkbox,
   Textarea,
+  Dropdown,
 }
