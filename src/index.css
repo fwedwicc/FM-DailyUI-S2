@@ -37,6 +37,20 @@ body::-webkit-scrollbar-thumb {
   @apply bg-gray-600/40 rounded-[3px];
 }
 
+/* Custom Scrollbar - for component */
+
+.custom-scollbar::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.custom-scollbar::-webkit-scrollbar-track {
+  @apply bg-gray-800/50;
+}
+
+.custom-scollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-600/40 rounded-[3px];
+}
+
 /* Paragraph and Headings */
 p {
   @apply text-gray-300 md:text-base text-sm md:leading-normal leading-5;
