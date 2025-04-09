@@ -50,6 +50,17 @@ const Draft = () => {
     )
   }
 
+  const CustomButton = ({ icon, label, active }) => {
+    return (
+      <div className='flex flex-col items-center gap-1'>
+        <button className={`${active ? 'bg-indigo-500 hover:bg-gray-400 text-white' : 'bg-gray-800 hover:bg-gray-700 text-indigo-500'} size-12 flex items-center justify-center rounded-full transition duration-300 ease-in-out cursor-pointer`}>
+          {icon}
+        </button>
+        <p>{label}</p>
+      </div>
+    )
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -100,7 +111,7 @@ const Draft = () => {
       {/* Main Content */}
       <main className='grid lg:grid-cols-3 grid-cols-1 lg:ml-20 ml-0 h-screen border border-yellow-300/40'>
         {/* Side Content */}
-        <div className='z-50 p-4 space-y-4 lg:order-1 order-2 col-span-1 overflow-auto custom-scrollbar h-full border border-yellow-300/40'>
+        <div className='z-50 p-4 space-y-4 lg:order-1 order-2 col-span-1 overflow-auto custom-scrollbar h-full bg-gray-900 border border-yellow-300/40'>
           {/* Search */}
           <div className='relative'>
             <Input
@@ -186,7 +197,7 @@ const Draft = () => {
           {/* Sample Map */}
           <img src="https://placehold.co/30x30" alt="Placeholder Map Image" className='absolute w-full h-full object-cover' />
           {/* Nike - Active */}
-          <div className='absolute flex gap-3 top-1/2 right-1/4 w-full max-w-md bg-gray-800'>
+          <div className='absolute flex gap-4 top-2/6 right-1/4 w-full max-w-[25rem]'>
             <Avatar
               type='profile'
               size='size-12'
@@ -194,7 +205,54 @@ const Draft = () => {
               outline='outline-2 outline-offset-2 outline-indigo-500'
               styles='flex-shrink-0'
             />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, consectetur quaerat minima iste numquam quo vitae praesentium assumenda amet cupiditate suscipit tempore, libero doloribus repellendus saepe nesciunt! Asperiores, eligendi quia.</p>
+            <div className='w-full bg-gray-900 border rounded-xl p-1'>
+              {/* Banner */}
+              <div className='relative h-28 w-full rounded-lg overflow-hidden border border-yellow-300'>
+                <img src="https://placehold.co/30x30" alt="Placeholder Banner" className='absolute object-cover w-full h-full' />
+              </div>
+              {/*  */}
+              <div className='p-3'>
+                <div className='flex items-start justify-between'>
+                  <span className='flex items-center gap-1'>
+                    <h5>Nike</h5>
+                    <HiBadgeCheck className='size-5.5 text-indigo-500' />
+                  </span>
+                  <p>Shoe Store</p>
+                </div>
+                <div className='flex items-center gap-[1px]'>
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <HiStar
+                      key={star}
+                      className={`size-4 ${star <= 5 ? 'text-yellow-500' : 'text-gray-500'}`}
+                    />
+                  ))}
+                  <span className='text-sm text-gray-300 ml-1'>(5)</span>
+                </div>
+                <p>Multinlupa Ciy</p>
+                {/*  */}
+                <div className='flex items-center justify-around gap-2 mt-4'>
+                  <CustomButton
+                    label='Route'
+                    active
+                    icon={<HiOutlineMenuAlt1 className='size-5' />}
+                  />
+                  <CustomButton
+                    label='Save'
+                    icon={<HiOutlineMenuAlt1 className='size-5' />}
+                  />
+                  <CustomButton
+                    label='Nearby'
+                    icon={<HiOutlineMenuAlt1 className='size-5' />}
+                  />
+                  <CustomButton
+                    label='Share'
+                    icon={<HiOutlineMenuAlt1 className='size-5' />}
+                  />
+                </div>
+                {/*  */}
+                <Button label={'More details'} variant='outline' size='md' styles='flex justify-center w-full mt-3' />
+              </div>
+            </div>
           </div>
           {/*  */}
           <div className='absolute top-1/4 left-12'>

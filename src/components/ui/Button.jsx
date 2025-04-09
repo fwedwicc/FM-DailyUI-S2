@@ -11,7 +11,7 @@ const outlineStyle = 'border border-gray-700 hover:bg-gray-800 focus-visible:out
 
 const Button = ({ styles, variant, label, disabled, onClick, size, iconButton, children }) => {
   return (
-    <button type="submit" disabled={disabled} onClick={onClick} className={`${iconButton ? 'md:p-2.5 p-2' : size === 'sm' ? sm : size === 'md' ? md : lg} ${disabled ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer'} ${baseStyle} ${styles} ${variant === 'primary' ? primaryStyle : variant === 'secondary' ? secondaryStyle : variant === 'ghost' ? ghostyStyle : variant === 'outline' ? outlineStyle : ''}`}>
+    <button type="submit" disabled={disabled} onClick={onClick} className={`${styles} ${iconButton ? 'md:p-2.5 p-2' : size === 'sm' ? sm : size === 'md' ? md : lg} ${disabled ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer'} ${baseStyle} ${variant === 'primary' ? primaryStyle : variant === 'secondary' ? secondaryStyle : variant === 'ghost' ? ghostyStyle : variant === 'outline' ? outlineStyle : ''}`}>
       {label}
       {children}
     </button>
