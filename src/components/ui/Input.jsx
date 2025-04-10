@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Input = ({ label, placeholder, id, type, name, styles, required, inputStyles }) => {
+const Input = ({ label, placeholder, id, type, name, value, styles, required, inputStyles }) => {
   return (
     <div className={`flex flex-col ${styles}`}>
       <div className='flex items-start'>
@@ -13,6 +13,7 @@ const Input = ({ label, placeholder, id, type, name, styles, required, inputStyl
         id={id}
         name={name}
         type={type}
+        value={value}
         placeholder={placeholder}
         className={`flex w-full rounded-lg bg-white/5 px-3.5 py-2 md:text-base text-sm text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 transition duration-300 ease-in-out ${inputStyles}`}
       />

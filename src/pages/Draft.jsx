@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Button, Dropdown, Avatar, Input } from '../components/ui'
-import { HiOutlineMenuAlt1, HiOutlineRefresh, HiOutlineBookmark, HiOutlineDeviceMobile, HiOutlineViewGrid, HiBadgeCheck, HiStar } from "react-icons/hi"
+import { HiOutlineMenuAlt1, HiOutlineRefresh, HiOutlineBookmark, HiOutlineDeviceMobile, HiOutlineViewGrid, HiBadgeCheck, HiStar, HiOutlineSearch, HiOutlineX, HiOutlineShare, HiOutlineStar, HiOutlineClock, HiOutlineAdjustments, HiOutlineMap, HiOutlineLocationMarker } from "react-icons/hi"
 import useScrollToTop from '../hooks/useScrollToTop'
 
 const Draft = () => {
@@ -117,51 +117,51 @@ const Draft = () => {
             <Input
               id="username"
               name="username"
+              value="Shoe store"
               type="text"
-              placeholder="E.g fwedwicc"
               styles="w-auto"
               inputStyles='pr-24 px-3 py-3 rounded-xl'
             />
             <div className='flex absolute right-2 top-1/2 -translate-y-1/2 gap-1'>
               <Button variant='ghost' iconButton>
-                <HiOutlineMenuAlt1 className='size-5' />
+                <HiOutlineSearch className='size-5' />
               </Button>
               <Button variant='ghost' iconButton>
-                <HiOutlineMenuAlt1 className='size-5' />
+                <HiOutlineX className='size-5' />
               </Button>
             </div>
           </div>
           {/* Results & Share Button */}
           <div className='flex items-center justify-between border border-yellow-300/40'>
-            <h4 className='flex items-center gap-1'>Results <span className='text-base font-medium text-gray-400'>(114)</span></h4>
-            <Button variant='outline' label='Share' size='sm' styles='text-blue-300'>
-              <HiOutlineDeviceMobile className='size-4 stroke-[1.3px]' />
+            <h4 className='flex items-center gap-2'>Results <span className='text-base font-medium text-gray-400'>(114)</span></h4>
+            <Button variant='ghost' label='Share' size='sm' styles='text-blue-300'>
+              <HiOutlineShare className='size-4 stroke-[1.3px]' />
             </Button>
           </div>
           {/* Filters */}
           <div className='flex items-center gap-2 border border-yellow-300/40'>
             <Dropdown
-              variant="secondary"
+              variant="outline"
               size="md"
               label="Ratings"
-              icon={<HiOutlineRefresh className="size-4" />}
+              icon={<HiOutlineStar className="size-4" />}
             >
               <Button label={'Option 1'} variant='ghost' styles='hover:bg-gray-900' />
               <Button label={'Option 2'} variant='ghost' styles='hover:bg-gray-900' />
               <Button label={'Option 3'} variant='ghost' styles='hover:bg-gray-900' />
             </Dropdown>
             <Dropdown
-              variant="secondary"
+              variant="outline"
               size="md"
               label="Hours"
-              icon={<HiOutlineRefresh className="size-4" />}
+              icon={<HiOutlineClock className="size-4" />}
             >
               <Button label={'Option 1'} variant='ghost' styles='hover:bg-gray-900' />
               <Button label={'Option 2'} variant='ghost' styles='hover:bg-gray-900' />
               <Button label={'Option 3'} variant='ghost' styles='hover:bg-gray-900' />
             </Dropdown>
             <Button variant='outline' label='Filters' size='md' styles='text-blue-300'>
-              <HiOutlineDeviceMobile className='size-4 stroke-[1.3px]' />
+              <HiOutlineAdjustments className='size-4 stroke-[1.3px]' />
             </Button>
           </div>
           {/* Items */}
@@ -234,19 +234,19 @@ const Draft = () => {
                   <CustomButton
                     label='Route'
                     active
-                    icon={<HiOutlineMenuAlt1 className='size-5' />}
+                    icon={<HiOutlineMap className='size-5' />}
                   />
                   <CustomButton
                     label='Save'
-                    icon={<HiOutlineMenuAlt1 className='size-5' />}
+                    icon={<HiOutlineBookmark className='size-5' />}
                   />
                   <CustomButton
                     label='Nearby'
-                    icon={<HiOutlineMenuAlt1 className='size-5' />}
+                    icon={<HiOutlineLocationMarker className='size-5' />}
                   />
                   <CustomButton
                     label='Share'
-                    icon={<HiOutlineMenuAlt1 className='size-5' />}
+                    icon={<HiOutlineShare className='size-5' />}
                   />
                 </div>
                 {/*  */}
@@ -254,46 +254,22 @@ const Draft = () => {
               </div>
             </div>
           </div>
-          {/*  */}
-          <div className='absolute top-1/4 left-12'>
-            <Avatar
-              type='profile'
-              size='size-12'
-              image='https://placehold.co/30x30'
-              outline='outline-2 outline-offset-2 outline-indigo-500'
-              styles=''
-            />
-          </div>
-          {/*  */}
-          <div className='absolute top-2/6 right-12'>
-            <Avatar
-              type='profile'
-              size='size-12'
-              image='https://placehold.co/30x30'
-              outline='outline-2 outline-offset-2 outline-indigo-500'
-              styles=''
-            />
-          </div>
-          {/*  */}
-          <div className='absolute top-5/6 right-3/4'>
-            <Avatar
-              type='profile'
-              size='size-12'
-              image='https://placehold.co/30x30'
-              outline='outline-2 outline-offset-2 outline-indigo-500'
-              styles=''
-            />
-          </div>
-          {/*  */}
-          <div className='absolute top-1/6 right-2/4'>
-            <Avatar
-              type='profile'
-              size='size-12'
-              image='https://placehold.co/30x30'
-              outline='outline-2 outline-offset-2 outline-indigo-500'
-              styles=''
-            />
-          </div>
+          {/* Decoys */}
+          {[
+            { image: 'https://placehold.co/30x30', position: 'top-1/4 left-12' },
+            { image: 'https://placehold.co/30x30', position: 'top-2/6 right-12' },
+            { image: 'https://placehold.co/30x30', position: 'top-5/6 right-3/4' },
+            { image: 'https://placehold.co/30x30', position: 'top-1/6 right-2/4' },
+          ].map((item, index) => (
+            <div className={`absolute ${item.position}`} key={index}>
+              <Avatar
+                type='profile'
+                size='size-12'
+                image={item.image}
+                outline='outline-2 outline-offset-2 outline-indigo-500'
+              />
+            </div>
+          ))}
         </div>
       </main>
     </motion.div>
