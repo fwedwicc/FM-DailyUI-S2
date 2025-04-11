@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Button, Dropdown, Avatar, Input } from '../components/ui'
 import { HiOutlineMenuAlt1, HiOutlineRefresh, HiOutlineBookmark, HiOutlineDeviceMobile, HiOutlineViewGrid, HiBadgeCheck, HiStar, HiOutlineSearch, HiOutlineX, HiOutlineShare, HiOutlineStar, HiOutlineClock, HiOutlineAdjustments, HiOutlineMap, HiOutlineLocationMarker } from "react-icons/hi"
-import { MapDesign, NikeStore } from '../assets/day29'
+import {  MapDesign, NikeStore, Nike, Adidas, Skechers, Puma, Converse } from '../assets/day29'
 import useScrollToTop from '../hooks/useScrollToTop'
 
 const Draft = () => {
@@ -168,13 +168,13 @@ const Draft = () => {
           {/* Items */}
           <div className='flex flex-col gap-2 border border-yellow-300/40'>
             {[
-              { badge: true, image: 'https://placehold.co/30x30', name: 'Nike', branch: 'Muntinlupa City', address: 'Alabang Town Center, Alabang-Zapote Road', ratings: 5, open: '9AM', close: '6PM' },
-              { badge: true, image: 'https://placehold.co/30x30', name: 'Adidas', branch: 'Quezon City', address: 'Trinoma Mall, North Avenue corner EDSA', ratings: 4, open: '10AM', close: '7PM' },
-              { badge: false, image: 'https://placehold.co/30x30', name: 'Puma', branch: 'Cebu City', address: 'Ayala Center Cebu, Archbishop Reyes Ave', ratings: 3, open: '9AM', close: '8PM' },
-              { badge: true, image: 'https://placehold.co/30x30', name: 'Skechers', branch: 'Davao City', address: 'SM City Davao, Quimpo Boulevard', ratings: 5, open: '10AM', close: '9PM' },
+              { badge: true, image: Nike, name: 'Nike', branch: 'Muntinlupa City', address: 'Alabang Town Center, Alabang-Zapote Road', ratings: 5, open: '9AM', close: '6PM' },
+              { badge: true, image: Adidas, name: 'Adidas', branch: 'Quezon City', address: 'Trinoma Mall, North Avenue corner EDSA', ratings: 4, open: '10AM', close: '7PM' },
+              { badge: false, image: Puma, name: 'Puma', branch: 'Cebu City', address: 'Ayala Center Cebu, Archbishop Reyes Ave', ratings: 3, open: '9AM', close: '8PM' },
+              { badge: true, image: Skechers, name: 'Skechers', branch: 'Davao City', address: 'SM City Davao, Quimpo Boulevard', ratings: 5, open: '10AM', close: '9PM' },
               { badge: false, image: 'https://placehold.co/30x30', name: 'Under Armour', branch: 'Taguig City', address: 'BGC High Street, 9th Ave', ratings: 4, open: '11AM', close: '7PM' },
               { badge: true, image: 'https://placehold.co/30x30', name: 'New Balance', branch: 'Makati City', address: 'Greenbelt 3, Esperanza Street', ratings: 4, open: '10AM', close: '8PM' },
-              { badge: false, image: 'https://placehold.co/30x30', name: 'Converse', branch: 'Baguio City', address: 'SM Baguio, Luneta Hill', ratings: 3, open: '9AM', close: '7PM' },
+              { badge: false, image: Converse, name: 'Converse', branch: 'Baguio City', address: 'SM Baguio, Luneta Hill', ratings: 3, open: '9AM', close: '7PM' },
               { badge: true, image: 'https://placehold.co/30x30', name: 'Fila', branch: 'Iloilo City', address: 'Robinsons Place Iloilo, De Leon St.', ratings: 2, open: '9AM', close: '6PM' },
               { badge: false, image: 'https://placehold.co/30x30', name: 'Reebok', branch: 'Pasig City', address: 'Estancia Mall, Capitol Commons', ratings: 4, open: '10AM', close: '9PM' },
               { badge: true, image: 'https://placehold.co/30x30', name: 'Vans', branch: 'Las Piñas City', address: 'SM Southmall, Alabang-Zapote Road', ratings: 5, open: '10AM', close: '9PM' }
@@ -202,7 +202,7 @@ const Draft = () => {
             <Avatar
               type='profile'
               size='md:size-12 size-10'
-              image='https://placehold.co/30x30'
+              image={Nike}
               outline='outline-2 outline-offset-2 outline-indigo-500'
               styles='flex-shrink-0 mt-2'
             />
@@ -257,10 +257,10 @@ const Draft = () => {
           </div>
           {/* Decoys */}
           {[
-            { image: 'https://placehold.co/30x30', name: "Adidas", position: 'md:top-1/4 top-36 -left-4' },
-            { image: 'https://placehold.co/30x30', name: "Puma", position: 'top-2/6 right-12' },
-            { image: 'https://placehold.co/30x30', name: "Skechers", position: 'top-5/6 right-3/4' },
-            { image: 'https://placehold.co/30x30', name: "Converse", position: 'top-1/6 right-2/4' },
+            { image: Adidas, name: "Adidas", position: 'md:top-1/4 top-36 -left-4' },
+            { image: Puma, name: "Puma", position: 'top-2/6 right-12' },
+            { image: Skechers, name: "Skechers", position: 'top-5/6 right-3/4' },
+            { image: Converse, name: "Converse", position: 'top-1/6 right-2/4' },
           ].map((item, index) => (
             <div className={`flex flex-col gap-1 items-center absolute ${item.position}`} key={index}>
               <Avatar
