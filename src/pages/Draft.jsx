@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Button, Dropdown, Avatar, Input } from '../components/ui'
 import { HiOutlineMenuAlt1, HiOutlineRefresh, HiOutlineBookmark, HiOutlineDeviceMobile, HiOutlineViewGrid, HiBadgeCheck, HiStar, HiOutlineSearch, HiOutlineX, HiOutlineShare, HiOutlineStar, HiOutlineClock, HiOutlineAdjustments, HiOutlineMap, HiOutlineLocationMarker } from "react-icons/hi"
+import { MapDesign, NikeStore } from '../assets/day29'
 import useScrollToTop from '../hooks/useScrollToTop'
 
 const Draft = () => {
@@ -21,7 +22,7 @@ const Draft = () => {
           />
           {/* Store and Branch */}
           <div className='flex flex-col'>
-            <span className='flex items-center gap-1 text-xl text-gray-200 font-medium'>
+            <span className='flex items-center gap-1 md:text-xl text-md text-gray-200 font-medium'>
               {name}
               {badge === true ? <HiBadgeCheck className='text-indigo-500' /> : null}
             </span>
@@ -53,7 +54,7 @@ const Draft = () => {
   const CustomButton = ({ icon, label, active }) => {
     return (
       <div className='flex flex-col items-center gap-1'>
-        <button className={`${active ? 'bg-indigo-500 hover:bg-gray-400 text-white' : 'bg-gray-800 hover:bg-gray-700 text-indigo-500'} size-12 flex items-center justify-center rounded-full transition duration-300 ease-in-out cursor-pointer`}>
+        <button className={`${active ? 'bg-indigo-500 hover:bg-gray-400 text-white' : 'bg-gray-800 hover:bg-gray-700 text-indigo-500'} md:size-12 size-11 flex items-center justify-center rounded-full transition duration-300 ease-in-out cursor-pointer`}>
           {icon}
         </button>
         <p>{label}</p>
@@ -96,7 +97,7 @@ const Draft = () => {
         </Button>
         {/* Other Actions */}
         <div className='flex items-center gap-3 p-3'>
-          <Button variant='ghost' iconButton>
+          <Button variant='secondary' iconButton>
             <HiOutlineViewGrid className='size-5 stroke-[1.3px]' />
           </Button>
           <Avatar
@@ -111,7 +112,7 @@ const Draft = () => {
       {/* Main Content */}
       <main className='grid lg:grid-cols-3 grid-cols-1 lg:ml-20 ml-0 h-screen border border-yellow-300/40'>
         {/* Side Content */}
-        <div className='z-50 p-4 space-y-4 lg:order-1 order-2 col-span-1 overflow-auto custom-scrollbar h-full bg-gray-900 border border-yellow-300/40'>
+        <div className='z-50 md:p-4 p-3 space-y-4 lg:order-1 order-2 col-span-1 overflow-auto custom-scrollbar h-full bg-gray-900 border border-yellow-300/40'>
           {/* Search */}
           <div className='relative'>
             <Input
@@ -144,7 +145,7 @@ const Draft = () => {
               variant="outline"
               size="md"
               label="Ratings"
-              icon={<HiOutlineStar className="size-4" />}
+              icon={<HiOutlineStar className="md:size-4 size-3" />}
             >
               <Button label={'Option 1'} variant='ghost' styles='hover:bg-gray-900' />
               <Button label={'Option 2'} variant='ghost' styles='hover:bg-gray-900' />
@@ -154,14 +155,14 @@ const Draft = () => {
               variant="outline"
               size="md"
               label="Hours"
-              icon={<HiOutlineClock className="size-4" />}
+              icon={<HiOutlineClock className="md:size-4 size-3" />}
             >
               <Button label={'Option 1'} variant='ghost' styles='hover:bg-gray-900' />
               <Button label={'Option 2'} variant='ghost' styles='hover:bg-gray-900' />
               <Button label={'Option 3'} variant='ghost' styles='hover:bg-gray-900' />
             </Dropdown>
             <Button variant='outline' label='Filters' size='md' styles='text-blue-300'>
-              <HiOutlineAdjustments className='size-4 stroke-[1.3px]' />
+              <HiOutlineAdjustments className='md:size-4 size-3 stroke-[1.3px]' />
             </Button>
           </div>
           {/* Items */}
@@ -193,22 +194,22 @@ const Draft = () => {
           </div>
         </div>
         {/* Map */}
-        <div className='relative lg:h-screen h-94 lg:order-2 order-1 col-span-2 border border-yellow-300/40'>
+        <div className='relative lg:h-screen h-94 lg:order-2 order-1 col-span-2 border border-yellow-300/40 overflow-hidden'>
           {/* Sample Map */}
-          <img src="https://placehold.co/30x30" alt="Placeholder Map Image" className='absolute w-full h-full object-cover' />
+          <img src={MapDesign} alt="Map Design" className='absolute w-full h-full object-cover' />
           {/* Nike - Active */}
-          <div className='absolute flex gap-4 top-2/6 right-1/4 w-full max-w-[25rem]'>
+          <div className='z-30 absolute flex gap-4 md:top-2/6 top-6 md:right-1/4 -right-12 w-full max-w-[25rem] border border-yellow-300/40'>
             <Avatar
               type='profile'
-              size='size-12'
+              size='md:size-12 size-10'
               image='https://placehold.co/30x30'
               outline='outline-2 outline-offset-2 outline-indigo-500'
-              styles='flex-shrink-0'
+              styles='flex-shrink-0 mt-2'
             />
-            <div className='w-full bg-gray-900 border rounded-xl p-1'>
+            <div className='w-full bg-gray-900 border border-gray-800 rounded-xl p-1.5'>
               {/* Banner */}
-              <div className='relative h-28 w-full rounded-lg overflow-hidden border border-yellow-300'>
-                <img src="https://placehold.co/30x30" alt="Placeholder Banner" className='absolute object-cover w-full h-full' />
+              <div className='relative h-28 w-full rounded-lg overflow-hidden border border-gray-800'>
+                <img src={NikeStore} alt="Nike Store" className='absolute object-cover w-full h-full' />
               </div>
               {/*  */}
               <div className='p-3'>
@@ -256,18 +257,19 @@ const Draft = () => {
           </div>
           {/* Decoys */}
           {[
-            { image: 'https://placehold.co/30x30', position: 'top-1/4 left-12' },
-            { image: 'https://placehold.co/30x30', position: 'top-2/6 right-12' },
-            { image: 'https://placehold.co/30x30', position: 'top-5/6 right-3/4' },
-            { image: 'https://placehold.co/30x30', position: 'top-1/6 right-2/4' },
+            { image: 'https://placehold.co/30x30', name: "Adidas", position: 'md:top-1/4 top-36 -left-4' },
+            { image: 'https://placehold.co/30x30', name: "Puma", position: 'top-2/6 right-12' },
+            { image: 'https://placehold.co/30x30', name: "Skechers", position: 'top-5/6 right-3/4' },
+            { image: 'https://placehold.co/30x30', name: "Converse", position: 'top-1/6 right-2/4' },
           ].map((item, index) => (
-            <div className={`absolute ${item.position}`} key={index}>
+            <div className={`flex flex-col gap-1 items-center absolute ${item.position}`} key={index}>
               <Avatar
                 type='profile'
-                size='size-12'
+                size='md:size-12 size-9'
                 image={item.image}
-                outline='outline-2 outline-offset-2 outline-indigo-500'
+                outline='outline-2 outline-offset-2 outline-gray-700'
               />
+              <p>{item.name}</p>
             </div>
           ))}
         </div>
