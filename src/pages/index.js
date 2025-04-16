@@ -8,6 +8,7 @@ import Day27 from './Day27'
 import Day28 from './Day28'
 import Day29 from './Day29'
 import Day30 from './Day30'
+import Day31 from './Day31'
 
 export {
   Home,
@@ -20,4 +21,5 @@ export {
   Day28,
   Day29,
   Day30,
+  Day31,
 }

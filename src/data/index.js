@@ -7,6 +7,7 @@ export const titles = [
   'Contact Page', // Day28
   'Map Design', // Day29
   'Pricing', // Day30
+  'File Upload', // Day31
 ]
 
 const descriptions = [
@@ -15,6 +16,7 @@ const descriptions = [
   "Is it for customer support? A purchase inquiry? To schedule an appointment? Is it a full page or just a form? Imagine a scenario and the most important feature it would require. Contact pages are some of the most visited pages on websites so it's important to have the most critical information, but not so much that people get lost.", // Day28
   "Not one of those old school paper ones though. Actually, that might be kinda neat. What type of information should it have? Should its color scheme compliment the brand? Is it for food delivery? Or an interactive map of train stations?", // Day29
   "Is it a pricing table for a SaaS website? An in-app purchase? Or upgrade options for a restaurant menu? Displaying prices in an easy-to-read format is a good design and business practice. Make the price obvious and don't try to hide anything. Overly complex pricing tables or designs create confusion and consequently a lack of trust… bad for both business and design.", // Day30
+  "Is it the loading screen and an icon? A progress element? Are folders being uploaded by flying across the screen like Ghostbusters? Would a user need to input additional information such as tax data or attach an image (like an identification card) during the process?", // Day31
 ]
 
 const images = [
