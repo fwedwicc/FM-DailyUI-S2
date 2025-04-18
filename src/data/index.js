@@ -8,6 +8,7 @@ export const titles = [
   'Map Design', // Day29
   'Pricing', // Day30
   'File Upload', // Day31
+  'Crowdfunding', // Day32
 ]
 
 const descriptions = [
@@ -17,6 +18,7 @@ const descriptions = [
   "Not one of those old school paper ones though. Actually, that might be kinda neat. What type of information should it have? Should its color scheme compliment the brand? Is it for food delivery? Or an interactive map of train stations?", // Day29
   "Is it a pricing table for a SaaS website? An in-app purchase? Or upgrade options for a restaurant menu? Displaying prices in an easy-to-read format is a good design and business practice. Make the price obvious and don't try to hide anything. Overly complex pricing tables or designs create confusion and consequently a lack of trust… bad for both business and design.", // Day30
   "Is it the loading screen and an icon? A progress element? Are folders being uploaded by flying across the screen like Ghostbusters? Would a user need to input additional information such as tax data or attach an image (like an identification card) during the process?", // Day31
+  "Keep in mind the purpose... raising funds. It's important to make a design simple and compelling if you're seeking money. Is it for startups to raise money from investors? (Such as on WeFunder, Republic, StartEngine) Or raising funds for a community cause like funding the restoration of a historical monument? So what's really important? The number of contributors, the total amount raised, campaign details, and highlights? Also consider size, imagery, placement, slogans, etc.", // Day32
 ]
 
 const images = [

@@ -2,7 +2,7 @@ import React from 'react'
 import { VRGlass } from '../assets'
 import { motion } from 'framer-motion'
 
-const Day33 = () => {
+const Day32 = () => {
 
   return (
     <motion.div
@@ -21,4 +21,4 @@ const Day33 = () => {
   )
 }
 
-export default Day33
+export default Day32
