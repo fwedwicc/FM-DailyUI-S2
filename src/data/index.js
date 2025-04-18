@@ -1,4 +1,4 @@
-import { DefaultThumbnail, Day26Thumbnail, Day27Thumbnail, Day28Thumbnail, Day29Thumbnail, Day30Thumbnail } from '../assets/thumbnail'
+import { DefaultThumbnail, Day26Thumbnail, Day27Thumbnail, Day28Thumbnail, Day29Thumbnail, Day30Thumbnail, Day31Thumbnail } from '../assets/thumbnail'
 export const Cards = []
 
 export const titles = [
@@ -25,6 +25,7 @@ const images = [
   Day28Thumbnail, // Day28
   Day29Thumbnail, // Day29
   Day30Thumbnail, // Day30
+  Day31Thumbnail, // Day31
 ]
 
 const defaultImage = DefaultThumbnail
