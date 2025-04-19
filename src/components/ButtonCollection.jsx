@@ -26,6 +26,18 @@ const ButtonCollection = () => {
         {/* Outline Button */}
         <Button label={'Outline'} variant='outline'>
         </Button>
+        {/* Success Button */}
+        <Button label={'Success'} variant='success'>
+        </Button>
+        {/* Info Button */}
+        <Button label={'Info'} variant='info'>
+        </Button>
+        {/* Warning Button */}
+        <Button label={'Warning'} variant='warning'>
+        </Button>
+        {/* Danger Button */}
+        <Button label={'Danger'} variant='danger'>
+        </Button>
         {/* Primary Button with icon-start */}
         <Button label={'Primary'} variant='primary'>
           <HiOutlineStar className='size-5' />

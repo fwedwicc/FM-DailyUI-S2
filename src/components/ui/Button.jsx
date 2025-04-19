@@ -8,13 +8,15 @@ const primaryStyle = 'text-white bg-indigo-500 hover:bg-indigo-400 focus-visible
 const secondaryStyle = 'text-white bg-gray-800 hover:bg-gray-700 focus-visible:outline-gray-800'
 const ghostyStyle = 'text-white hover:bg-gray-800 focus-visible:outline-none'
 const outlineStyle = 'text-white border border-gray-700 hover:bg-gray-800 focus-visible:outline-none'
-const dangerStyle = 'text-red-400 bg-red-400/10 hover:bg-red-400/20 focus-visible:outline-red-400/10'
+const successStyle = 'text-green-400 bg-green-400/10 hover:bg-green-400/20 focus-visible:outline-green-400/10'
 const infoStyle = 'text-blue-400 bg-blue-400/10 hover:bg-blue-400/20 focus-visible:outline-blue-400/10'
+const warningStyle = 'text-yellow-400 bg-yellow-400/10 hover:bg-yellow-400/20 focus-visible:outline-yellow-400/10'
+const dangerStyle = 'text-red-400 bg-red-400/10 hover:bg-red-400/20 focus-visible:outline-red-400/10'
 
 
 const Button = ({ styles, variant, label, disabled, onClick, size, iconButton, children }) => {
   return (
-    <button type="submit" disabled={disabled} onClick={onClick} className={`${styles} ${iconButton ? 'md:p-2.5 p-2' : size === 'sm' ? sm : size === 'md' ? md : lg} ${disabled ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer'} ${baseStyle} ${variant === 'primary' ? primaryStyle : variant === 'secondary' ? secondaryStyle : variant === 'ghost' ? ghostyStyle : variant === 'outline' ? outlineStyle : variant === 'danger' ? dangerStyle : variant === 'info' ? infoStyle : ''}`}>
+    <button type="submit" disabled={disabled} onClick={onClick} className={`${styles} ${iconButton ? 'md:p-2.5 p-2' : size === 'sm' ? sm : size === 'md' ? md : lg} ${disabled ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer'} ${baseStyle} ${variant === 'primary' ? primaryStyle : variant === 'secondary' ? secondaryStyle : variant === 'ghost' ? ghostyStyle : variant === 'outline' ? outlineStyle : variant === 'success' ? successStyle : variant === 'warning' ? warningStyle : variant === 'info' ? infoStyle : variant === 'danger' ? dangerStyle : ''}`}>
       {label}
       {children}
     </button>
