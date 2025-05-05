@@ -13,7 +13,7 @@ const Draft = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h1>Hello, World</h1>
+      <h1>Hello, World123</h1>
     </motion.div>
   )
 }
