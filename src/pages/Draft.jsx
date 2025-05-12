@@ -13,7 +13,7 @@ const Draft = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h1>Cheat push :<<<< I forgot again.</h1>
+      <h1>Cheat push. I forgot again</h1>
     </motion.div>
   )
 }
