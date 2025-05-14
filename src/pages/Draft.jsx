@@ -14,6 +14,7 @@ const Draft = () => {
       transition={{ duration: 0.5 }}
       className=''
     >
+      <h1>Cheat push. I forgot again</h1>
       <div className='ml-64 h-full border border-yellow-300/50'>
         <div className='flex items-center justify-between bg-gray-900 fixed w-[85%] border-b border-yellow-300/50 p-4'>
           <div>
