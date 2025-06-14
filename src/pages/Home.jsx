@@ -5,8 +5,6 @@ import { Header, Hero, Challenges, Footer } from '../components'
 
 const Home = () => {
 
-  useScrollRestoration()
-
   return (
     <motion.main
       initial={{ opacity: 0 }}
