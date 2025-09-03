@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import useScrollToTop from '../hooks/useScrollToTop'
-import { TbBattery1 } from "react-icons/tb"
+import { TbBattery1, TbX } from "react-icons/tb"
 import { IoIosWifi } from "react-icons/io"
 import { HiChartBar } from "react-icons/hi"
 
@@ -33,14 +33,14 @@ const Draft = () => {
             <div className='absolute right-1 -translate-y-1/2 top-1/2 size-3.5 rounded-full bg-black/30' />
           </div>
           {/* Phone Header */}
-          <div className='absolute w-full flex justify-between items-center pt-3 px-6 text-white z-50'>
+          {/* <div className='absolute w-full flex justify-between items-center pt-3 px-6 text-white z-50'>
             <span className="leading-relaxed text-xs font-semibold">4:17</span>
             <div className='flex items-center gap-1'>
               <HiChartBar className='size-3 me-0.5' />
               <IoIosWifi className='size-3.5' />
               <TbBattery1 className='size-5 stroke-[1.5px]' />
             </div>
-          </div>
+          </div> */}
           {children}
         </div>
       </div>
@@ -60,8 +60,44 @@ const Draft = () => {
         <PhoneMockup>
           <div className='relative h-full overflow-hidden rounded-[39px]'>
             <img src="https://placehold.co/30x30" alt="Sampol wolpepah" className='absolute object-cover size-full z-10' />
-            <div className='relative h-full w-full px-3.5 pt-12 z-50'>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae esse illum, ducimus laboriosam ipsam reiciendis quasi autem? Veritatis vel, commodi enim non consectetur quibusdam quos sit nihil impedit. Voluptas, perferendis.</p>
+            <div className='relative flex flex-col justify-between h-full w-full p-3.5 z-50'>
+              <div className='space-y-10'>
+                {/* Actions */}
+                <div className='flex items-center justify-between border border-yellow-500/30'>
+                  <button className='px-4 py-1 rounded-xl bg-gray-500/40'>
+                    <TbX className='size-5 text-gray-200' />
+                  </button>
+                  <button className='px-4 py-1 rounded-xl bg-gray-500/40'>
+                    <TbX className='size-5 text-gray-200' />
+                  </button>
+                </div>
+                {/* Main Content */}
+                <div className='space-y-3'>
+                  <div className='p-3 rounded-xl border-2 border-gray-500/40'>
+                    <h1>11</h1>
+                    <h1>53</h1>
+                    <span className='text-xs text-gray-300'>Mon, Sep 01</span>
+                  </div>
+                  <div className='p-3 rounded-xl border-2 border-gray-500/40'>
+                    <div className='flex items-center gap-2 p-2 rounded-md bg-gray-500/30'>
+                      <div className='size-7 bg-gray-600/40 rounded-md'></div>
+                      <div className='space-y-2'>
+                        <div className='bg-gray-600/40 w-14 h-2 rounded-md'></div>
+                        <div className='bg-gray-600/40 w-26 h-2 rounded-md'></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Footer */}
+              <div className='flex items-center justify-between border border-yellow-500/30'>
+                <button className='flex items-center justify-center size-12 rounded-full bg-gray-500/20 border-4 border-gray-50/5 ring-2 ring-gray-500/40'>
+                  <TbX className='size-5 text-gray-200' />
+                </button>
+                <button className='flex items-center justify-center size-12 rounded-full bg-gray-500/20 border-4 border-gray-50/5 ring-2 ring-gray-500/40'>
+                  <TbX className='size-5 text-gray-200' />
+                </button>
+              </div>
             </div>
           </div>
         </PhoneMockup>
