@@ -103,8 +103,57 @@ const Draft = () => {
         </PhoneMockup>
         {/* Second Mockup */}
         <PhoneMockup>
-          <div className='relative h-full px-3.5 pt-12 overflow-hidden'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae esse illum, ducimus laboriosam ipsam reiciendis quasi autem? Veritatis vel, commodi enim non consectetur quibusdam quos sit nihil impedit. Voluptas, perferendis.</p>
+          <div className='relative h-full overflow-hidden rounded-[39px]'>
+            <img src="https://placehold.co/30x30" alt="Sampol wolpepah" className='absolute object-cover size-full z-10' />
+            <div className='relative flex flex-col justify-between h-full w-full p-3.5 z-50'>
+              <div className='space-y-10'>
+                {/* Actions */}
+                <div className='flex items-center justify-between border border-yellow-500/30'>
+                  <button className='px-4 py-1 rounded-xl bg-gray-500/40'>
+                    <TbX className='size-5 text-gray-200' />
+                  </button>
+                  <button className='px-4 py-1 rounded-xl bg-gray-500/40'>
+                    <TbX className='size-5 text-gray-200' />
+                  </button>
+                </div>
+                {/* Main Content */}
+                <div className='space-y-3'>
+                  <div className='p-3 rounded-xl border-2 border-gray-500/40'>
+                    <h1>11</h1>
+                    <h1>53</h1>
+                    <span className='text-xs text-gray-300'>Mon, Sep 01</span>
+                  </div>
+                  <div className='p-3 rounded-xl border-2 border-gray-500/40'>
+                    <div className='flex items-center gap-2 p-2 rounded-md bg-gray-500/30'>
+                      <div className='size-7 bg-gray-600/40 rounded-md'></div>
+                      <div className='space-y-2'>
+                        <div className='bg-gray-600/40 w-14 h-2 rounded-md'></div>
+                        <div className='bg-gray-600/40 w-26 h-2 rounded-md'></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Drawer */}
+              <div className='absolute left-0 bottom-0 w-full pt-5 p-4 space-y-2 rounded-t-3xl bg-gray-900 border border-yellow-300/20'>
+                <div className='absolute top-2 -translate-x-1/2 left-1/2 h-1 w-9 rounded-full bg-gray-700' />
+                <p>Time</p>
+                <div className='grid grid-cols-3 gap-2 border border-yellow-300/20'>
+                  <div className='w-full h-23 border border-yellow-300/20 rounded-lg'>
+                    <h4>11:53</h4>
+                  </div>
+                  <div className='w-full h-23 border border-yellow-300/20 rounded-lg'>
+                    <h4>11:53</h4>
+                  </div>
+                  <div className='w-full h-23 border border-yellow-300/20 rounded-lg'>
+                    <h4>11:53</h4>
+                  </div>
+                  <div className='w-full h-23 border border-yellow-300/20 rounded-lg'>
+                    <h4>11:53</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </PhoneMockup>
       </div>
