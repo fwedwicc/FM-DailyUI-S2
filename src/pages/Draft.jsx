@@ -25,7 +25,7 @@ const Draft = () => {
         {/* Power Button */}
         <div className='absolute top-[10.3rem] -right-[2px] rounded-r-[1px] w-[2px] bg-gray-400 border-l border-gray-800 h-18' />
         {/* Phone */}
-        <div className='relative border-[0.5rem] size-full rounded-[46px] ring-2 z-50 bg-gray-800 border-neutral-950 ring-gray-700'>
+        <div className='relative border-[0.5rem] size-full rounded-[46px] ring-2 z-50 bg-gray-800 border-neutral-950 ring-gray-700 overflow-hidden'>
           {/* Speacker ba to?? */}
           <div className='absolute -top-2 -translate-x-1/2 left-1/2 w-[3rem] h-[3px] rounded-b-full bg-neutral-900 z-50' />
           {/* Camera */}
@@ -63,7 +63,7 @@ const Draft = () => {
               </button>
             </div>
             {/* Main Content */}
-            <div className='space-y-3'>
+            <div className='space-y-3 border border-yellow-500/30'>
               <div className='p-3 rounded-xl border-2 border-gray-500/40'>
                 <h1>11</h1>
                 <h1>53</h1>
@@ -103,21 +103,22 @@ const Draft = () => {
       transition={{ duration: 0.5 }}
       className='min-h-screen flex items-center justify-center p-12 md:px-12 px-8 py-8'
     >
-      <div className='flex items-center justify-center md:flex-nowrap flex-wrap gap-12 lg:gap-20'>
+      <div className='flex items-center justify-center md:flex-nowrap flex-wrap gap-12 lg:gap-20 border border-yellow-500/30'>
         {/* First Mockup */}
         <PhoneMockup>
-          <div className='relative h-full overflow-hidden rounded-[39px]'>
+          <div className='relative h-full overflow-hidden'>
             <Content />
           </div>
         </PhoneMockup>
         {/* Second Mockup */}
         <PhoneMockup>
-          <div className='relative h-full overflow-hidden rounded-[39px]'>
+          <div className='relative h-full overflow-hidden'>
             <Content>
               {/* Drawer */}
               <div className='absolute left-0 bottom-0 w-full pt-5 p-4 space-y-2 rounded-t-3xl bg-gray-900 border border-yellow-300/20'>
                 <div className='absolute top-2 -translate-x-1/2 left-1/2 h-1 w-9 rounded-full bg-gray-700' />
                 <p>Time</p>
+                {/* Time Position */}
                 <div className='grid grid-cols-3 gap-2 border border-yellow-300/20'>
                   {[
                     { position: 'items-center justify-start' },
@@ -125,16 +126,32 @@ const Draft = () => {
                     { position: 'items-center justify-end' },
                     { position: 'items-center justify-start' },
                   ].map((item, index) => (
-                    <div className={`${item.position} flex p-2 w-full h-16 border border-yellow-300/20 rounded-lg`} key={index}>
+                    <div className={`${item.position} flex p-2 w-full h-22 border border-yellow-300/20 rounded-lg`} key={index}>
                       {index === 3 ? <h5>11 <br /> 53</h5> : <h5>11:53</h5>}
                     </div>
                   ))}
-                  <div className='w-full h-16 border border-yellow-300/20 rounded-lg'>
+                  <div className='w-full h-22 border border-yellow-300/20 rounded-lg'>
                     {/* <h5>11:53</h5> */}
                   </div>
-                  <div className='w-full h-16 border border-yellow-300/20 rounded-lg'>
+                  <div className='w-full h-22 border border-yellow-300/20 rounded-lg'>
                     {/* <h5>11:53</h5> */}
                   </div>
+                </div>
+                {/* Font */}
+                <div className='mt-4 grid grid-cols-5 gap-2'>
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <div className={`flex items-center justify-center w-full h-13 rounded-lg ${index === 1 ? 'border-[1.5px] border-indigo-400' : 'border border-yellow-300/20'}`} key={index}>
+                      <h3>12</h3>
+                    </div>
+                  ))}
+                </div>
+                {/* Color Preferences */}
+                <div className='mt-4 grid grid-cols-7 gap-4 border border-yellow-300/20'>
+                  {Array.from({ length: 7 }).map((_, index) => (
+                    <div className={`size-6.5 rounded-2xl bg-white ${index === 0 ? 'flex items-center justify-center border-2 border-gray-800 ring-[1.5px] ring-gray-500' : ''}`} key={index}>
+                      {index === 0 && (<TbX className='size-3 text-gray-600' />)}
+                    </div>
+                  ))}
                 </div>
               </div>
             </Content>
