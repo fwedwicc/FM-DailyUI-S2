@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @layer base {
@@ -80,3 +81,30 @@ h5 {
   [&::-webkit-scrollbar-thumb]:rounded-full
   [&::-webkit-scrollbar-thumb]:bg-gray-600/40;
 }
+
+/* -------- Challenge #33 -------- */
+.cossette-titre-bold {
+  font-family: "Cossette Titre", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+.epunda-slab {
+  font-family: "Epunda Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+/* -------- // Challenge #33 -------- */
