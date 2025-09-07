@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import useScrollToTop from '../hooks/useScrollToTop'
-import { TbBattery1, TbX } from "react-icons/tb"
+import { TbBattery1, TbX, TbArrowRight } from "react-icons/tb"
 import { IoIosWifi } from "react-icons/io"
 import { HiChartBar } from "react-icons/hi"
 
@@ -66,15 +66,15 @@ const Draft = () => {
             <div className='space-y-3 border border-yellow-500/30'>
               <div className='p-3 rounded-xl border-2 border-gray-500/40'>
                 <h1>11</h1>
-                <h1>53</h1>
-                <span className='text-xs text-gray-300'>Mon, Sep 01</span>
+                <h1>07</h1>
+                <span className='text-xs text-gray-300'>Mon, Feb 19</span>
               </div>
               <div className='p-3 rounded-xl border-2 border-gray-500/40'>
                 <div className='flex items-center gap-2 p-2 rounded-md bg-gray-500/30'>
-                  <div className='size-7 bg-gray-600/40 rounded-md'></div>
+                  <div className='size-7 bg-gray-600/40 rounded-md' />
                   <div className='space-y-2'>
-                    <div className='bg-gray-600/40 w-14 h-2 rounded-md'></div>
-                    <div className='bg-gray-600/40 w-26 h-2 rounded-md'></div>
+                    <div className='bg-gray-600/40 w-14 h-2 rounded-md' />
+                    <div className='bg-gray-600/40 w-26 h-2 rounded-md' />
                   </div>
                 </div>
               </div>
@@ -92,6 +92,64 @@ const Draft = () => {
           {children}
         </div>
       </>
+    )
+  }
+
+  const StaticClock = ({ variant }) => {
+    const radius = 42
+    const clockSize = 80
+    const hourHand = clockSize * 0.25
+    const minuteHand = clockSize * 0.35
+    const secondHand = clockSize * 0.45
+    return (
+      <div className="relative size-20 flex items-center justify-center">
+        {/* Clock Face */}
+        {variant === "numbers"
+          ? Array.from({ length: 12 }).map((_, i) => {
+            const angle = (i + 1) * 30
+            const x = 50 + 42 * Math.sin((angle * Math.PI) / 180)
+            const y = 50 - 42 * Math.cos((angle * Math.PI) / 180)
+            const isQuarter = (i + 1) % 3 === 0
+            return (
+              <div
+                key={i}
+                className={`absolute ${isQuarter ? "text-[13px] text-gray-200" : 'text-[9px] text-gray-300'}`}
+                style={{
+                  top: `${y}%`,
+                  left: `${x}%`,
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                {i + 1}
+              </div>
+            )
+          })
+          : Array.from({ length: 12 }).map((_, i) => {
+            const angle = (i + 1) * 30
+            const x = 50 + 42 * Math.sin((angle * Math.PI) / 180)
+            const y = 50 - 42 * Math.cos((angle * Math.PI) / 180)
+            const isQuarter = (i + 1) % 3 === 0
+            return (
+              <div
+                key={i}
+                className={`absolute rounded-full ${isQuarter ? 'h-1.5 w-[2px] bg-gray-100' : 'h-1 w-[1px] bg-gray-300'}`}
+                style={{
+                  top: `${y}%`,
+                  left: `${x}%`,
+                  transform: `translate(-50%, -50%) rotate(${angle}deg)`,
+                }}
+              />
+            )
+          })}
+        {/* Hour Hand */}
+        <div className="w-[1.5px] absolute bg-gray-300 rounded origin-bottom top-5" style={{ height: `${hourHand}px`, transform: "rotate(333.5deg)" }} />
+        {/* Minute Hand */}
+        <div className="w-[1.5px] absolute bg-gray-600 rounded origin-bottom top-3" style={{ height: `${minuteHand}px`, transform: "rotate(42deg)", }} />
+        {/* Seconds Hand */}
+        <div className="w-[1px] absolute bg-indigo-500 rounded origin-bottom top-1" style={{ height: `${secondHand}px`, transform: "rotate(199deg)", }} />
+        {/* Center Dot */}
+        <div className="absolute size-1.5 bg-gray-200 rounded-full" />
+      </div>
     )
   }
 
@@ -115,42 +173,43 @@ const Draft = () => {
           <div className='relative h-full overflow-hidden'>
             <Content>
               {/* Drawer */}
-              <div className='absolute left-0 bottom-0 w-full pt-5 p-4 space-y-2 rounded-t-3xl bg-gray-900 border border-yellow-300/20'>
+              <div className='absolute left-0 bottom-0 w-full pt-5 p-4 space-y-2 rounded-t-3xl bg-gray-900 border border-gray-800/60'>
                 <div className='absolute top-2 -translate-x-1/2 left-1/2 h-1 w-9 rounded-full bg-gray-700' />
                 <p>Time</p>
                 {/* Time Position */}
-                <div className='grid grid-cols-3 gap-2 border border-yellow-300/20'>
+                <div className='grid grid-cols-3 gap-2'>
                   {[
                     { position: 'items-center justify-start' },
                     { position: 'items-center justify-center' },
                     { position: 'items-center justify-end' },
                     { position: 'items-center justify-start' },
                   ].map((item, index) => (
-                    <div className={`${item.position} flex p-2 w-full h-22 border border-yellow-300/20 rounded-lg`} key={index}>
-                      {index === 3 ? <h5>11 <br /> 53</h5> : <h5>11:53</h5>}
+                    <div className={`${item.position} ${index === 3 ? 'border-[2px] border-indigo-500' : 'border border-gray-800'} flex p-2 w-full h-22 rounded-[10px]`} key={index}>
+                      {index === 3 ? <h5 className='leading-5'>11 <br /> 07</h5> : <h5>11:07</h5>}
                     </div>
                   ))}
-                  <div className='w-full h-22 border border-yellow-300/20 rounded-lg'>
-                    {/* <h5>11:53</h5> */}
+                  <div className='w-full h-22 border border-gray-800 rounded-[10px] flex items-center justify-center'>
+                    <StaticClock variant="numbers" />
                   </div>
-                  <div className='w-full h-22 border border-yellow-300/20 rounded-lg'>
-                    {/* <h5>11:53</h5> */}
+                  <div className='w-full h-22 border border-gray-800 rounded-[10px] flex items-center justify-center'>
+                    <StaticClock variant="ticks" />
                   </div>
                 </div>
                 {/* Font */}
-                <div className='mt-4 grid grid-cols-5 gap-2'>
+                <div className='mt-4.5 grid grid-cols-5 gap-2'>
                   {Array.from({ length: 5 }).map((_, index) => (
-                    <div className={`flex items-center justify-center w-full h-13 rounded-lg ${index === 1 ? 'border-[1.5px] border-indigo-400' : 'border border-yellow-300/20'}`} key={index}>
+                    <div className={`flex items-center justify-center w-full h-13 rounded-lg ${index === 1 ? 'border-[2px] border-indigo-500' : 'border border-gray-800'}`} key={index}>
                       <h3>12</h3>
                     </div>
                   ))}
                 </div>
                 {/* Color Preferences */}
-                <div className='mt-4 grid grid-cols-7 gap-4 border border-yellow-300/20'>
-                  {Array.from({ length: 7 }).map((_, index) => (
-                    <div className={`size-6.5 rounded-2xl bg-white ${index === 0 ? 'flex items-center justify-center border-2 border-gray-800 ring-[1.5px] ring-gray-500' : ''}`} key={index}>
-                      {index === 0 && (<TbX className='size-3 text-gray-600' />)}
-                    </div>
+                <div className='mt-4.5 grid grid-cols-8 gap-4'>
+                  <div className='size-5.5 rounded-2xl bg-white flex items-center justify-center border-2 border-gray-800 ring-[1.5px] ring-gray-500'>
+                    <TbX className='size-3 text-gray-600' />
+                  </div>
+                  {['bg-green-300', 'bg-blue-300', 'bg-teal-300', 'bg-indigo-300', 'bg-purple-300', 'bg-rose-300', , 'bg-amber-200'].map((item, index) => (
+                    <div className={`size-5.5 rounded-2xl ${item}`} key={index} />
                   ))}
                 </div>
               </div>
