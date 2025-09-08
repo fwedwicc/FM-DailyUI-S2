@@ -12,8 +12,9 @@ const Draft = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
+      className='h-screen flex items-center justify-center'
     >
-      <h1>Hello, World</h1>
+      <h3>Hello, World</h3>
     </motion.div>
   )
 }

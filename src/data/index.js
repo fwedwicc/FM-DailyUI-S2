@@ -10,6 +10,7 @@ export const titles = [
   'File Upload', // Day31
   'Crowdfunding', // Day32
   'Customize Product', // Day33
+  'Automotive Interface', // Day34
 ]
 
 const descriptions = [
@@ -21,6 +22,7 @@ const descriptions = [
   "Is it the loading screen and an icon? A progress element? Are folders being uploaded by flying across the screen like Ghostbusters? Would a user need to input additional information such as tax data or attach an image (like an identification card) during the process?", // Day31
   "Keep in mind the purpose... raising funds. It's important to make a design simple and compelling if you're seeking money. Is it for startups to raise money from investors? (Such as on WeFunder, Republic, StartEngine) Or raising funds for a community cause like funding the restoration of a historical monument? So what's really important? The number of contributors, the total amount raised, campaign details, and highlights? Also consider size, imagery, placement, slogans, etc.", // Day32
   "Design something related to customizing a product. It could be a custom t-shirt, stickers, shoes, etc. Or is this someone customizing their phone's text and lock screen? What elements does a custom product need? A logo, an image, extra text, or something else?", // Day33
+  "Consider the elements you'd want and need in your own vehicle's dashboard. If you don't have a car, think of what's needed to control one in a video game, a VR headset, or in a movie. Be creative, yet logical.", // Day34
 ]
 
 const images = [

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home, UICollection, UpcomingChallenge, NoPage, Draft, Day26, Day27, Day28, Day29, Day30, Day31, Day32, Day33 } from '../pages'
+import { Home, UICollection, UpcomingChallenge, NoPage, Draft, Day26, Day27, Day28, Day29, Day30, Day31, Day32, Day33, Day34 } from '../pages'
 
 const existingPages = {
   Day26,
@@ -10,6 +10,7 @@ const existingPages = {
   Day31,
   Day32,
   Day33,
+  Day34,
 }
 
 export const routes = [

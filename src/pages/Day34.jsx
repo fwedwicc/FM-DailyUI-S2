@@ -2,7 +2,7 @@ import React from 'react'
 import { CuteCat } from '../assets'
 import { motion } from 'framer-motion'
 
-const Day35 = () => {
+const Day34 = () => {
 
   return (
     <motion.div
@@ -32,4 +32,4 @@ const Day35 = () => {
   )
 }
 
-export default Day35
+export default Day34
